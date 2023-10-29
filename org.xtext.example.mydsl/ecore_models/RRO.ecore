@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RRO" nsURI="https://www.w3.org/1999/02/22-rdf-syntax-ns#" nsPrefix="RRO">
+  <eSubpackages name="RDF" nsURI="https://www.w3.org/1999/02/rdf-syntax-ns#" nsPrefix="RDF">
+    <eClassifiers xsi:type="ecore:EClass" name="Property" abstract="true" eSuperTypes="#//RDFS/Resource">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="domain" eType="#//RDFS/Class"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//RDFS/Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true" eSuperTypes="#//RDFS/Resource">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subject" eType="#//RDFS/Resource"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" eType="#//RDFS/Resource"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="object" eType="#//RDFS/Resource"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Bag" eSuperTypes="#//RDFS/Container"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Seq" eSuperTypes="#//RDFS/Container"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Alt" eSuperTypes="#//RDFS/Container"/>
+    <eClassifiers xsi:type="ecore:EClass" name="List" eSuperTypes="#//RDFS/Resource"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CompoundLiteral" eSuperTypes="#//RDFS/Class"/>
+  </eSubpackages>
+  <eSubpackages name="RDFS" nsURI="https://www.w3.org/2000/01/rdf-schema#" nsPrefix="RDFS">
+    <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true" eSuperTypes="#//RDFS/Class"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Class" abstract="true" eSuperTypes="#//RDFS/Resource">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subClassOf" eType="#//RDFS/Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Resource" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//RDFS/Class"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="comment" eType="#//RDFS/Literal"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//RDFS/Resource"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="seeAlso" eType="#//RDFS/Resource"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isDefinedBy" eType="#//RDFS/Resource"
+          derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//RDFS/Resource"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="about" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//RDFS/Resource"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//RDFS/Resource"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ContainerMembershipProperty" eSuperTypes="#//RDF/Property"/>
+  </eSubpackages>
+  <eSubpackages name="OWL" nsURI="https://www.w3.org/2002/07/owl#" nsPrefix="OWL">
+    <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//RDFS/Class"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Ontology" eSuperTypes="#//RDFS/Resource"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OntologyProperty" eSuperTypes="#//RDF/Property"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DatatypeProperty" eSuperTypes="#//RDF/Property"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ObjectProperty" eSuperTypes="#//RDF/Property"/>
+  </eSubpackages>
+</ecore:EPackage>
