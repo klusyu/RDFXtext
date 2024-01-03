@@ -10,19 +10,20 @@ import org.eclipse.xtext.testing.util.ParseHelper
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.^extension.ExtendWith
-import org.xtext.example.mydsl.rDFTurtle.Mapping
+import org.xtext.example.mydsl.rDFTurtle.TurtleDoc
 
 @ExtendWith(InjectionExtension)
 @InjectWith(RDFTurtleInjectorProvider)
 class RDFTurtleParsingTest {
 	@Inject
-	ParseHelper<Mapping> parseHelper
+	ParseHelper<TurtleDoc> parseHelper
 	
 	@Test
 	def void loadModel() {
 		val result = parseHelper.parse('''
 			Hello Xtext!
 		''')
+		System.out.println(result)
 		Assertions.assertNotNull(result)
 		val errors = result.eResource.errors
 		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')

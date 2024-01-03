@@ -1,0 +1,179 @@
+@prefix : <http://example.org/hospital#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/hospital> .
+
+<http://example.org/hospital> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/hospital#hasNeoplasm
+:hasNeoplasm rdf:type owl:ObjectProperty ;
+             rdfs:domain :Patient ;
+             rdfs:range :Neoplasm .
+
+
+###  http://example.org/hospital#hasStage
+:hasStage rdf:type owl:ObjectProperty ;
+          rdfs:domain :Neoplasm ;
+          rdfs:range :NeoplasmStage .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/hospital#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/hospitalNSCLCStage
+<http://example.org/hospitalNSCLCStage> rdf:type owl:Class .
+
+
+###  http://example.org/hospitalSCLCStage
+<http://example.org/hospitalSCLCStage> rdf:type owl:Class .
+
+
+###  http://example.org/hospital#BenignNeoplasm
+:BenignNeoplasm rdf:type owl:Class ;
+                rdfs:subClassOf :Neoplasm .
+
+
+###  http://example.org/hospital#Cancer
+:Cancer rdf:type owl:Class ;
+        rdfs:subClassOf :MalignantNeoplasm .
+
+
+###  http://example.org/hospital#LungCancer
+:LungCancer rdf:type owl:Class ;
+            rdfs:subClassOf :Cancer .
+
+
+###  http://example.org/hospital#MalignantNeoplasm
+:MalignantNeoplasm rdf:type owl:Class ;
+                   rdfs:subClassOf :Neoplasm .
+
+
+###  http://example.org/hospital#NSCLC
+:NSCLC rdf:type owl:Class ;
+       rdfs:subClassOf :LungCancer .
+
+
+###  http://example.org/hospital#NSCLCStage
+:NSCLCStage rdf:type owl:Class ;
+            rdfs:subClassOf :NeoplasmStage ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasStage ;
+                              owl:allValuesFrom :NSCLCStage
+                            ] .
+
+
+###  http://example.org/hospital#Neoplasm
+:Neoplasm rdf:type owl:Class .
+
+
+###  http://example.org/hospital#NeoplasmStage
+:NeoplasmStage rdf:type owl:Class .
+
+
+###  http://example.org/hospital#Patient
+:Patient rdf:type owl:Class ;
+         rdfs:subClassOf :Person .
+
+
+###  http://example.org/hospital#Person
+:Person rdf:type owl:Class .
+
+
+###  http://example.org/hospital#SCLC
+:SCLC rdf:type owl:Class ;
+      rdfs:subClassOf :LungCancer .
+
+
+###  http://example.org/hospital#SCLCStage
+:SCLCStage rdf:type owl:Class ;
+           rdfs:subClassOf :NeoplasmStage ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasStage ;
+                             owl:allValuesFrom :SCLCStage
+                           ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/hospitalNSCLC-stage-I
+<http://example.org/hospitalNSCLC-stage-I> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/hospitalNSCLCStage> .
+
+
+###  http://example.org/hospitalNSCLC-stage-II
+<http://example.org/hospitalNSCLC-stage-II> rdf:type owl:NamedIndividual ,
+                                                     <http://example.org/hospitalNSCLCStage> .
+
+
+###  http://example.org/hospitalNSCLC-stage-III
+<http://example.org/hospitalNSCLC-stage-III> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/hospitalNSCLCStage> .
+
+
+###  http://example.org/hospitalNSCLC-stage-IV
+<http://example.org/hospitalNSCLC-stage-IV> rdf:type owl:NamedIndividual ,
+                                                     <http://example.org/hospitalNSCLCStage> .
+
+
+###  http://example.org/hospitalSCLC-stage-Extensive
+<http://example.org/hospitalSCLC-stage-Extensive> rdf:type owl:NamedIndividual ,
+                                                           <http://example.org/hospitalSCLCStage> .
+
+
+###  http://example.org/hospitalSCLC-stage-Limited
+<http://example.org/hospitalSCLC-stage-Limited> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/hospitalSCLCStage> .
+
+
+###  http://example.org/hospital#NSCLC-stage-I
+:NSCLC-stage-I rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/hospital#NSCLC-stage-II
+:NSCLC-stage-II rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/hospital#NSCLC-stage-III
+:NSCLC-stage-III rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/hospital#NSCLC-stage-IIIa
+:NSCLC-stage-IIIa rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/hospital#NSCLC-stage-IIIb
+:NSCLC-stage-IIIb rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/hospital#NSCLC-stage-IV
+:NSCLC-stage-IV rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/hospital#SCLC-stage-Extensive
+:SCLC-stage-Extensive rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/hospital#SCLC-stage-Limited
+:SCLC-stage-Limited rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 5.1.13.2020-01-27T22:08:36Z) https://github.com/owlcs/owlapi/
