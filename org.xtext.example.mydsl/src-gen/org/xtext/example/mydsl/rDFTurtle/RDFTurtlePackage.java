@@ -39,7 +39,7 @@ public interface RDFTurtlePackage extends EPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_URI = "http://www.xtext.org/example/mydsl/RDFTurtle";
+  String eNS_URI = "http://www.xtext.org/example/mydsl/NewTurtle";
 
   /**
    * The package namespace name.

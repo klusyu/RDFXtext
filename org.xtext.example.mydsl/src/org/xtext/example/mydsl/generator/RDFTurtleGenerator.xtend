@@ -10,6 +10,19 @@ import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.example.mydsl.rDFTurtle.TurtleDoc
 import org.xtext.example.mydsl.rDFTurtle.Directive
 import org.xtext.example.mydsl.rDFTurtle.Triples
+import org.xtext.example.mydsl.rDFTurtle.Subject
+import org.xtext.example.mydsl.rDFTurtle.Object
+import org.xtext.example.mydsl.rDFTurtle.Verb
+import org.xtext.example.mydsl.rDFTurtle.iResource
+import java.util.Map
+import java.util.HashMap
+import org.xtext.example.mydsl.rDFTurtle.Qname
+import org.xtext.example.mydsl.rDFTurtle.Blank
+import org.xtext.example.mydsl.rDFTurtle.NodeID
+import org.xtext.example.mydsl.rDFTurtle.Literal
+import org.xtext.example.mydsl.rDFTurtle.LanguageString
+import org.xtext.example.mydsl.rDFTurtle.DatatypeString
+import org.xtext.example.mydsl.rDFTurtle.PredicateObject
 
 /**
  * Generates code from your model files on save.
@@ -17,6 +30,8 @@ import org.xtext.example.mydsl.rDFTurtle.Triples
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class RDFTurtleGenerator extends AbstractGenerator {
+	
+	Map<String, String> NSMap = new HashMap<String, String>()
 	
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		// print("Generate:" + resource.className + ".xmi\r\n")
@@ -27,7 +42,7 @@ class RDFTurtleGenerator extends AbstractGenerator {
 	protected def String toXMI(TurtleDoc doc) {
 		return'''
 		<?xml version="1.0" encoding="UTF-8"?>
-		<rdf:TurtleDoc xmi:version="2.0" 
+		<sw:RDFDocument xmi:version="2.0" 
 			xmlns:xmi="http://www.omg.org/XMI" 
 			xmlns:rml="http://www.xtext.org/example/rdf/RDFTurtle">
 			«FOR s : doc.statements»
@@ -37,7 +52,7 @@ class RDFTurtleGenerator extends AbstractGenerator {
 					«s.triples.generateTriple»
 				«ENDIF»
 			«ENDFOR»
-		</rdf:TurtleDoc>
+		</sw:RDFDocument>
 		'''
 	}
 	//这里应该把Turtle模型转换为RDF模型，这样在ATL中会容易操作一些
@@ -59,16 +74,181 @@ class RDFTurtleGenerator extends AbstractGenerator {
 			iri = ns.base.iriref
 			eIRI = ''' base="«iri»"'''
 		}
-		// NAMESPACE.NSMappingPut(prefix, iri)
+		NSMap.put(prefix, iri)
 		var result = '''<directives«ePrefix»«eIRI»/>'''
 		//print(result + "\r\n")
 		return result
 	}
 	
 	protected def generateTriple(Triples triples) {
-		var subject = triples.subject
+		var s = triples.subject
+		var element = new Element()
 		for (po: triples.predicateObjectList.predicateObjects) {
-			
+			processPO(element, s, po)
 		}
+		return element.toXMI("") + "\n\n"
+	}
+	
+	protected def void processPO(Element parent, Subject s, PredicateObject po) {
+		var v = po.verb
+		var first = true
+		for (o: po.objectList.objects) {
+			if (o.blank !== null && o.blank.predicateObjectList !== null) {
+				var child = new Element(v.toText)
+				var subChild = new Element()
+				parent.addElement(child)
+				child.addElement(subChild)
+				// anonymous class
+				for (subPO: o.blank.predicateObjectList.predicateObjects) {
+					processPO(subChild, s, subPO)
+				}
+			}
+			else{
+				processSPO(parent, s, v, o, first)
+				first = false	
+			}
+		}
+	}
+	
+	protected def processSPO(Element parent, Subject s, Verb v, Object o, boolean first) {
+		print("subject:" + s.toText)
+		print(" Verb:" + v.toText)
+		println(" Object:" + o.toText)
+		var vt = v.toText
+		if (first && (vt == "rdf:type" || vt == "type")) {
+			parent.setType(o.toText)
+			parent.addAttribute("about", s.toText)
+		}
+		else{
+			var child = new Element(v.toText)
+			child.addAttribute("resource", o.toText)
+			parent.addElement(child)
+		}
+	}
+	
+	protected def toText(Subject s) {
+		if (s.resource !== null) {
+			return s.resource.toText
+		}
+		else if (s.blank !== null){
+			return s.blank.toText
+		}
+	}
+	
+	protected def toText(Verb v) {
+		if (v.isA) {
+			return 'a'
+		}
+		else{
+			return v.predicate.toText
+		}
+	}
+	
+	protected def toText(Object o) {
+		if (o.resource !== null) {
+			return o.resource.toText
+		}
+		else if (o.blank !== null) {
+			return o.blank.toText	
+		}
+		else if (o.literal !== null) {
+			return o.literal.toText
+		}
+	}
+	
+	protected def toText(Literal literal) {
+		var str = ""
+		if (literal.languageString !== null) {
+			str = literal.languageString.toText
+		}
+		else if (literal.datatypeString !== null) {
+			str = literal.datatypeString.toText
+		}
+		else if (literal.real !== null) {
+			str = literal.real.toString()
+		}
+		else if (literal.decimal !== null) {
+			str = literal.decimal.toString()
+		}
+		else if (literal.bool !== null) {
+			str = literal.bool.toString()
+		}
+		else{
+			//int
+			str = literal.dword.toString()
+		}
+
+		return str.TrimName
+	}
+	
+	protected def toText(iResource r) {
+		if (r.iriRef !== null) {
+			return r.iriRef.toString()
+		}
+		else if (r.qname !== null) {
+			return r.qname.toText
+		}
+	}
+	
+	
+	protected def toText(Qname qname) {
+		var str = ""
+		if (qname.prefixName !== null) {
+			str = qname.prefixName
+		}
+		if (qname.name !== null) {
+			str += qname.name
+		}
+		return str.TrimName
+	}
+	
+	protected def toText(Blank blank) {
+		if (blank.nodeID !== null) {
+			return blank.nodeID.toText
+		}
+		else if (blank.isSquare) {
+			return '[]'
+		}
+		else if (blank.predicateObjectList !== null) {
+			//Do nothing
+		}
+		else if (blank.collection !== null) {
+			//Do nothing
+		}
+	}
+	
+	protected def toText(NodeID node) {
+		return '_:' + node.name
+	}
+	
+	protected def toText(LanguageString l) {
+		var str=l.qutoedString 
+		if (l.lang !== null) {
+			str += '@' + l.lang 
+		}
+		return  str
+	}
+	
+	protected def toText(DatatypeString datatype) {
+		return datatype.qutoedString + '^^' + datatype.resource.toText
+	}
+	
+	protected def TrimName(String name) {
+		var str = name.trim()
+		if (str.startsWith("rdf:")) {
+			str = str.replace("rdf:", "")
+		}
+		else if (str.startsWith("rdfs:")){
+			str = str.replace("rdfs:", "")
+		}
+		else if (str.startsWith("owl:")) {
+			if (Character.isUpperCase(str.charAt(4))) {
+				str = str.replace(":", "")
+			}
+			else{
+				str = str.replace("owl:", "")
+			}
+		}
+		return str
 	}
 }

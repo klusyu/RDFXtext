@@ -122,11 +122,13 @@
 
 
 ###  http://example.org/hospital#NSCLC-stage-IIIa
-:NSCLC-stage-IIIa rdf:type owl:NamedIndividual .
+:NSCLC-stage-IIIa rdf:type owl:NamedIndividual ,
+                           :NSCLCStage .
 
 
 ###  http://example.org/hospital#NSCLC-stage-IIIb
-:NSCLC-stage-IIIb rdf:type owl:NamedIndividual .
+:NSCLC-stage-IIIb rdf:type owl:NamedIndividual ,
+                           :NSCLCStage .
 
 
 ###  http://example.org/hospital#NSCLC-stage-IV

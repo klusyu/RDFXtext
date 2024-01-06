@@ -59,7 +59,7 @@ Subject:
 ;
 
 Predicate returns iResource:
-	iResource
+	ir=iResource
 ;
 
 Object:
