@@ -50,8 +50,8 @@ Workflow {
 			}
 		}
 		language = StandardLanguage {
-			name = "org.xtext.example.mydsl.NewTurtle"
-			fileExtensions = "nt"
+			name = "org.xtext.example.mydsl.Sparql"
+			fileExtensions = "sparql"
 
 			serializer = {
 				generateStub = false

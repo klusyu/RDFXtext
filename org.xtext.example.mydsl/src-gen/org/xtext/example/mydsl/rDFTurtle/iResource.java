@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.rDFTurtle.iResource#getIr <em>Ir</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.rDFTurtle.iResource#getIriRef <em>Iri Ref</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.rDFTurtle.iResource#getQname <em>Qname</em>}</li>
  * </ul>
@@ -24,6 +25,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface iResource extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Ir</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ir</em>' containment reference.
+   * @see #setIr(iResource)
+   * @see org.xtext.example.mydsl.rDFTurtle.RDFTurtlePackage#getiResource_Ir()
+   * @model containment="true"
+   * @generated
+   */
+  iResource getIr();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.rDFTurtle.iResource#getIr <em>Ir</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ir</em>' containment reference.
+   * @see #getIr()
+   * @generated
+   */
+  void setIr(iResource value);
+
   /**
    * Returns the value of the '<em><b>Iri Ref</b></em>' attribute.
    * <!-- begin-user-doc -->

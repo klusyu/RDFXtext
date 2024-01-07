@@ -2346,36 +2346,55 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePredicate"
-    // InternalRDFTurtle.g:828:1: rulePredicate returns [EObject current=null] : this_iResource_0= ruleiResource ;
+    // InternalRDFTurtle.g:828:1: rulePredicate returns [EObject current=null] : ( (lv_ir_0_0= ruleiResource ) ) ;
     public final EObject rulePredicate() throws RecognitionException {
         EObject current = null;
 
-        EObject this_iResource_0 = null;
+        EObject lv_ir_0_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:834:2: (this_iResource_0= ruleiResource )
-            // InternalRDFTurtle.g:835:2: this_iResource_0= ruleiResource
+            // InternalRDFTurtle.g:834:2: ( ( (lv_ir_0_0= ruleiResource ) ) )
+            // InternalRDFTurtle.g:835:2: ( (lv_ir_0_0= ruleiResource ) )
+            {
+            // InternalRDFTurtle.g:835:2: ( (lv_ir_0_0= ruleiResource ) )
+            // InternalRDFTurtle.g:836:3: (lv_ir_0_0= ruleiResource )
+            {
+            // InternalRDFTurtle.g:836:3: (lv_ir_0_0= ruleiResource )
+            // InternalRDFTurtle.g:837:4: lv_ir_0_0= ruleiResource
             {
             if ( state.backtracking==0 ) {
 
-              		newCompositeNode(grammarAccess.getPredicateAccess().getIResourceParserRuleCall());
-              	
+              				newCompositeNode(grammarAccess.getPredicateAccess().getIrIResourceParserRuleCall_0());
+              			
             }
             pushFollow(FOLLOW_2);
-            this_iResource_0=ruleiResource();
+            lv_ir_0_0=ruleiResource();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              		current = this_iResource_0;
-              		afterParserOrEnumRuleCall();
-              	
+              				if (current==null) {
+              					current = createModelElementForParent(grammarAccess.getPredicateRule());
+              				}
+              				set(
+              					current,
+              					"ir",
+              					lv_ir_0_0,
+              					"org.xtext.example.mydsl.RDFTurtle.iResource");
+              				afterParserOrEnumRuleCall();
+              			
             }
+
+            }
+
+
+            }
+
 
             }
 
@@ -2398,7 +2417,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleObject"
-    // InternalRDFTurtle.g:846:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
+    // InternalRDFTurtle.g:857:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
     public final EObject entryRuleObject() throws RecognitionException {
         EObject current = null;
 
@@ -2406,8 +2425,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:846:47: (iv_ruleObject= ruleObject EOF )
-            // InternalRDFTurtle.g:847:2: iv_ruleObject= ruleObject EOF
+            // InternalRDFTurtle.g:857:47: (iv_ruleObject= ruleObject EOF )
+            // InternalRDFTurtle.g:858:2: iv_ruleObject= ruleObject EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getObjectRule()); 
@@ -2438,7 +2457,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleObject"
-    // InternalRDFTurtle.g:853:1: ruleObject returns [EObject current=null] : ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) ) ;
+    // InternalRDFTurtle.g:864:1: ruleObject returns [EObject current=null] : ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) ) ;
     public final EObject ruleObject() throws RecognitionException {
         EObject current = null;
 
@@ -2453,10 +2472,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:859:2: ( ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) ) )
-            // InternalRDFTurtle.g:860:2: ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) )
+            // InternalRDFTurtle.g:870:2: ( ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) ) )
+            // InternalRDFTurtle.g:871:2: ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) )
             {
-            // InternalRDFTurtle.g:860:2: ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) )
+            // InternalRDFTurtle.g:871:2: ( ( (lv_resource_0_0= ruleiResource ) ) | ( (lv_blank_1_0= ruleBlank ) ) | ( (lv_literal_2_0= ruleLiteral ) ) )
             int alt9=3;
             switch ( input.LA(1) ) {
             case RULE_IRIREF:
@@ -2494,13 +2513,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
             switch (alt9) {
                 case 1 :
-                    // InternalRDFTurtle.g:861:3: ( (lv_resource_0_0= ruleiResource ) )
+                    // InternalRDFTurtle.g:872:3: ( (lv_resource_0_0= ruleiResource ) )
                     {
-                    // InternalRDFTurtle.g:861:3: ( (lv_resource_0_0= ruleiResource ) )
-                    // InternalRDFTurtle.g:862:4: (lv_resource_0_0= ruleiResource )
+                    // InternalRDFTurtle.g:872:3: ( (lv_resource_0_0= ruleiResource ) )
+                    // InternalRDFTurtle.g:873:4: (lv_resource_0_0= ruleiResource )
                     {
-                    // InternalRDFTurtle.g:862:4: (lv_resource_0_0= ruleiResource )
-                    // InternalRDFTurtle.g:863:5: lv_resource_0_0= ruleiResource
+                    // InternalRDFTurtle.g:873:4: (lv_resource_0_0= ruleiResource )
+                    // InternalRDFTurtle.g:874:5: lv_resource_0_0= ruleiResource
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2535,13 +2554,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:881:3: ( (lv_blank_1_0= ruleBlank ) )
+                    // InternalRDFTurtle.g:892:3: ( (lv_blank_1_0= ruleBlank ) )
                     {
-                    // InternalRDFTurtle.g:881:3: ( (lv_blank_1_0= ruleBlank ) )
-                    // InternalRDFTurtle.g:882:4: (lv_blank_1_0= ruleBlank )
+                    // InternalRDFTurtle.g:892:3: ( (lv_blank_1_0= ruleBlank ) )
+                    // InternalRDFTurtle.g:893:4: (lv_blank_1_0= ruleBlank )
                     {
-                    // InternalRDFTurtle.g:882:4: (lv_blank_1_0= ruleBlank )
-                    // InternalRDFTurtle.g:883:5: lv_blank_1_0= ruleBlank
+                    // InternalRDFTurtle.g:893:4: (lv_blank_1_0= ruleBlank )
+                    // InternalRDFTurtle.g:894:5: lv_blank_1_0= ruleBlank
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2576,13 +2595,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRDFTurtle.g:901:3: ( (lv_literal_2_0= ruleLiteral ) )
+                    // InternalRDFTurtle.g:912:3: ( (lv_literal_2_0= ruleLiteral ) )
                     {
-                    // InternalRDFTurtle.g:901:3: ( (lv_literal_2_0= ruleLiteral ) )
-                    // InternalRDFTurtle.g:902:4: (lv_literal_2_0= ruleLiteral )
+                    // InternalRDFTurtle.g:912:3: ( (lv_literal_2_0= ruleLiteral ) )
+                    // InternalRDFTurtle.g:913:4: (lv_literal_2_0= ruleLiteral )
                     {
-                    // InternalRDFTurtle.g:902:4: (lv_literal_2_0= ruleLiteral )
-                    // InternalRDFTurtle.g:903:5: lv_literal_2_0= ruleLiteral
+                    // InternalRDFTurtle.g:913:4: (lv_literal_2_0= ruleLiteral )
+                    // InternalRDFTurtle.g:914:5: lv_literal_2_0= ruleLiteral
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2641,7 +2660,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLanguageString"
-    // InternalRDFTurtle.g:924:1: entryRuleLanguageString returns [EObject current=null] : iv_ruleLanguageString= ruleLanguageString EOF ;
+    // InternalRDFTurtle.g:935:1: entryRuleLanguageString returns [EObject current=null] : iv_ruleLanguageString= ruleLanguageString EOF ;
     public final EObject entryRuleLanguageString() throws RecognitionException {
         EObject current = null;
 
@@ -2649,8 +2668,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:924:55: (iv_ruleLanguageString= ruleLanguageString EOF )
-            // InternalRDFTurtle.g:925:2: iv_ruleLanguageString= ruleLanguageString EOF
+            // InternalRDFTurtle.g:935:55: (iv_ruleLanguageString= ruleLanguageString EOF )
+            // InternalRDFTurtle.g:936:2: iv_ruleLanguageString= ruleLanguageString EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLanguageStringRule()); 
@@ -2681,7 +2700,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLanguageString"
-    // InternalRDFTurtle.g:931:1: ruleLanguageString returns [EObject current=null] : ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? ) ;
+    // InternalRDFTurtle.g:942:1: ruleLanguageString returns [EObject current=null] : ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? ) ;
     public final EObject ruleLanguageString() throws RecognitionException {
         EObject current = null;
 
@@ -2694,17 +2713,17 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:937:2: ( ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? ) )
-            // InternalRDFTurtle.g:938:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? )
+            // InternalRDFTurtle.g:948:2: ( ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? ) )
+            // InternalRDFTurtle.g:949:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? )
             {
-            // InternalRDFTurtle.g:938:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? )
-            // InternalRDFTurtle.g:939:3: ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )?
+            // InternalRDFTurtle.g:949:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )? )
+            // InternalRDFTurtle.g:950:3: ( (lv_qutoedString_0_0= ruleQuotedString ) ) (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )?
             {
-            // InternalRDFTurtle.g:939:3: ( (lv_qutoedString_0_0= ruleQuotedString ) )
-            // InternalRDFTurtle.g:940:4: (lv_qutoedString_0_0= ruleQuotedString )
+            // InternalRDFTurtle.g:950:3: ( (lv_qutoedString_0_0= ruleQuotedString ) )
+            // InternalRDFTurtle.g:951:4: (lv_qutoedString_0_0= ruleQuotedString )
             {
-            // InternalRDFTurtle.g:940:4: (lv_qutoedString_0_0= ruleQuotedString )
-            // InternalRDFTurtle.g:941:5: lv_qutoedString_0_0= ruleQuotedString
+            // InternalRDFTurtle.g:951:4: (lv_qutoedString_0_0= ruleQuotedString )
+            // InternalRDFTurtle.g:952:5: lv_qutoedString_0_0= ruleQuotedString
             {
             if ( state.backtracking==0 ) {
 
@@ -2735,7 +2754,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRDFTurtle.g:958:3: (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )?
+            // InternalRDFTurtle.g:969:3: (otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) ) )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2744,7 +2763,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalRDFTurtle.g:959:4: otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) )
+                    // InternalRDFTurtle.g:970:4: otherlv_1= '@' ( (lv_lang_2_0= RULE_ID ) )
                     {
                     otherlv_1=(Token)match(input,23,FOLLOW_12); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2752,11 +2771,11 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_1, grammarAccess.getLanguageStringAccess().getCommercialAtKeyword_1_0());
                       			
                     }
-                    // InternalRDFTurtle.g:963:4: ( (lv_lang_2_0= RULE_ID ) )
-                    // InternalRDFTurtle.g:964:5: (lv_lang_2_0= RULE_ID )
+                    // InternalRDFTurtle.g:974:4: ( (lv_lang_2_0= RULE_ID ) )
+                    // InternalRDFTurtle.g:975:5: (lv_lang_2_0= RULE_ID )
                     {
-                    // InternalRDFTurtle.g:964:5: (lv_lang_2_0= RULE_ID )
-                    // InternalRDFTurtle.g:965:6: lv_lang_2_0= RULE_ID
+                    // InternalRDFTurtle.g:975:5: (lv_lang_2_0= RULE_ID )
+                    // InternalRDFTurtle.g:976:6: lv_lang_2_0= RULE_ID
                     {
                     lv_lang_2_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2813,7 +2832,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLiteral"
-    // InternalRDFTurtle.g:986:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
+    // InternalRDFTurtle.g:997:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
     public final EObject entryRuleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -2821,8 +2840,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:986:48: (iv_ruleLiteral= ruleLiteral EOF )
-            // InternalRDFTurtle.g:987:2: iv_ruleLiteral= ruleLiteral EOF
+            // InternalRDFTurtle.g:997:48: (iv_ruleLiteral= ruleLiteral EOF )
+            // InternalRDFTurtle.g:998:2: iv_ruleLiteral= ruleLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLiteralRule()); 
@@ -2853,7 +2872,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLiteral"
-    // InternalRDFTurtle.g:993:1: ruleLiteral returns [EObject current=null] : ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) ) ;
+    // InternalRDFTurtle.g:1004:1: ruleLiteral returns [EObject current=null] : ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) ) ;
     public final EObject ruleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -2871,10 +2890,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:999:2: ( ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) ) )
-            // InternalRDFTurtle.g:1000:2: ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) )
+            // InternalRDFTurtle.g:1010:2: ( ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) ) )
+            // InternalRDFTurtle.g:1011:2: ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) )
             {
-            // InternalRDFTurtle.g:1000:2: ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) )
+            // InternalRDFTurtle.g:1011:2: ( ( (lv_languageString_0_0= ruleLanguageString ) ) | ( (lv_datatypeString_1_0= ruleDatatypeString ) ) | ( (lv_dword_2_0= RULE_INT ) ) | ( (lv_real_3_0= RULE_DOUBLE ) ) | ( (lv_decimal_4_0= RULE_DECIMAL ) ) | ( (lv_bool_5_0= ruleBoolean ) ) )
             int alt11=6;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -2927,13 +2946,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
             switch (alt11) {
                 case 1 :
-                    // InternalRDFTurtle.g:1001:3: ( (lv_languageString_0_0= ruleLanguageString ) )
+                    // InternalRDFTurtle.g:1012:3: ( (lv_languageString_0_0= ruleLanguageString ) )
                     {
-                    // InternalRDFTurtle.g:1001:3: ( (lv_languageString_0_0= ruleLanguageString ) )
-                    // InternalRDFTurtle.g:1002:4: (lv_languageString_0_0= ruleLanguageString )
+                    // InternalRDFTurtle.g:1012:3: ( (lv_languageString_0_0= ruleLanguageString ) )
+                    // InternalRDFTurtle.g:1013:4: (lv_languageString_0_0= ruleLanguageString )
                     {
-                    // InternalRDFTurtle.g:1002:4: (lv_languageString_0_0= ruleLanguageString )
-                    // InternalRDFTurtle.g:1003:5: lv_languageString_0_0= ruleLanguageString
+                    // InternalRDFTurtle.g:1013:4: (lv_languageString_0_0= ruleLanguageString )
+                    // InternalRDFTurtle.g:1014:5: lv_languageString_0_0= ruleLanguageString
                     {
                     if ( state.backtracking==0 ) {
 
@@ -2968,13 +2987,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:1021:3: ( (lv_datatypeString_1_0= ruleDatatypeString ) )
+                    // InternalRDFTurtle.g:1032:3: ( (lv_datatypeString_1_0= ruleDatatypeString ) )
                     {
-                    // InternalRDFTurtle.g:1021:3: ( (lv_datatypeString_1_0= ruleDatatypeString ) )
-                    // InternalRDFTurtle.g:1022:4: (lv_datatypeString_1_0= ruleDatatypeString )
+                    // InternalRDFTurtle.g:1032:3: ( (lv_datatypeString_1_0= ruleDatatypeString ) )
+                    // InternalRDFTurtle.g:1033:4: (lv_datatypeString_1_0= ruleDatatypeString )
                     {
-                    // InternalRDFTurtle.g:1022:4: (lv_datatypeString_1_0= ruleDatatypeString )
-                    // InternalRDFTurtle.g:1023:5: lv_datatypeString_1_0= ruleDatatypeString
+                    // InternalRDFTurtle.g:1033:4: (lv_datatypeString_1_0= ruleDatatypeString )
+                    // InternalRDFTurtle.g:1034:5: lv_datatypeString_1_0= ruleDatatypeString
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3009,13 +3028,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRDFTurtle.g:1041:3: ( (lv_dword_2_0= RULE_INT ) )
+                    // InternalRDFTurtle.g:1052:3: ( (lv_dword_2_0= RULE_INT ) )
                     {
-                    // InternalRDFTurtle.g:1041:3: ( (lv_dword_2_0= RULE_INT ) )
-                    // InternalRDFTurtle.g:1042:4: (lv_dword_2_0= RULE_INT )
+                    // InternalRDFTurtle.g:1052:3: ( (lv_dword_2_0= RULE_INT ) )
+                    // InternalRDFTurtle.g:1053:4: (lv_dword_2_0= RULE_INT )
                     {
-                    // InternalRDFTurtle.g:1042:4: (lv_dword_2_0= RULE_INT )
-                    // InternalRDFTurtle.g:1043:5: lv_dword_2_0= RULE_INT
+                    // InternalRDFTurtle.g:1053:4: (lv_dword_2_0= RULE_INT )
+                    // InternalRDFTurtle.g:1054:5: lv_dword_2_0= RULE_INT
                     {
                     lv_dword_2_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3045,13 +3064,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRDFTurtle.g:1060:3: ( (lv_real_3_0= RULE_DOUBLE ) )
+                    // InternalRDFTurtle.g:1071:3: ( (lv_real_3_0= RULE_DOUBLE ) )
                     {
-                    // InternalRDFTurtle.g:1060:3: ( (lv_real_3_0= RULE_DOUBLE ) )
-                    // InternalRDFTurtle.g:1061:4: (lv_real_3_0= RULE_DOUBLE )
+                    // InternalRDFTurtle.g:1071:3: ( (lv_real_3_0= RULE_DOUBLE ) )
+                    // InternalRDFTurtle.g:1072:4: (lv_real_3_0= RULE_DOUBLE )
                     {
-                    // InternalRDFTurtle.g:1061:4: (lv_real_3_0= RULE_DOUBLE )
-                    // InternalRDFTurtle.g:1062:5: lv_real_3_0= RULE_DOUBLE
+                    // InternalRDFTurtle.g:1072:4: (lv_real_3_0= RULE_DOUBLE )
+                    // InternalRDFTurtle.g:1073:5: lv_real_3_0= RULE_DOUBLE
                     {
                     lv_real_3_0=(Token)match(input,RULE_DOUBLE,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3081,13 +3100,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalRDFTurtle.g:1079:3: ( (lv_decimal_4_0= RULE_DECIMAL ) )
+                    // InternalRDFTurtle.g:1090:3: ( (lv_decimal_4_0= RULE_DECIMAL ) )
                     {
-                    // InternalRDFTurtle.g:1079:3: ( (lv_decimal_4_0= RULE_DECIMAL ) )
-                    // InternalRDFTurtle.g:1080:4: (lv_decimal_4_0= RULE_DECIMAL )
+                    // InternalRDFTurtle.g:1090:3: ( (lv_decimal_4_0= RULE_DECIMAL ) )
+                    // InternalRDFTurtle.g:1091:4: (lv_decimal_4_0= RULE_DECIMAL )
                     {
-                    // InternalRDFTurtle.g:1080:4: (lv_decimal_4_0= RULE_DECIMAL )
-                    // InternalRDFTurtle.g:1081:5: lv_decimal_4_0= RULE_DECIMAL
+                    // InternalRDFTurtle.g:1091:4: (lv_decimal_4_0= RULE_DECIMAL )
+                    // InternalRDFTurtle.g:1092:5: lv_decimal_4_0= RULE_DECIMAL
                     {
                     lv_decimal_4_0=(Token)match(input,RULE_DECIMAL,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3117,13 +3136,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalRDFTurtle.g:1098:3: ( (lv_bool_5_0= ruleBoolean ) )
+                    // InternalRDFTurtle.g:1109:3: ( (lv_bool_5_0= ruleBoolean ) )
                     {
-                    // InternalRDFTurtle.g:1098:3: ( (lv_bool_5_0= ruleBoolean ) )
-                    // InternalRDFTurtle.g:1099:4: (lv_bool_5_0= ruleBoolean )
+                    // InternalRDFTurtle.g:1109:3: ( (lv_bool_5_0= ruleBoolean ) )
+                    // InternalRDFTurtle.g:1110:4: (lv_bool_5_0= ruleBoolean )
                     {
-                    // InternalRDFTurtle.g:1099:4: (lv_bool_5_0= ruleBoolean )
-                    // InternalRDFTurtle.g:1100:5: lv_bool_5_0= ruleBoolean
+                    // InternalRDFTurtle.g:1110:4: (lv_bool_5_0= ruleBoolean )
+                    // InternalRDFTurtle.g:1111:5: lv_bool_5_0= ruleBoolean
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3182,7 +3201,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDatatypeString"
-    // InternalRDFTurtle.g:1121:1: entryRuleDatatypeString returns [EObject current=null] : iv_ruleDatatypeString= ruleDatatypeString EOF ;
+    // InternalRDFTurtle.g:1132:1: entryRuleDatatypeString returns [EObject current=null] : iv_ruleDatatypeString= ruleDatatypeString EOF ;
     public final EObject entryRuleDatatypeString() throws RecognitionException {
         EObject current = null;
 
@@ -3190,8 +3209,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1121:55: (iv_ruleDatatypeString= ruleDatatypeString EOF )
-            // InternalRDFTurtle.g:1122:2: iv_ruleDatatypeString= ruleDatatypeString EOF
+            // InternalRDFTurtle.g:1132:55: (iv_ruleDatatypeString= ruleDatatypeString EOF )
+            // InternalRDFTurtle.g:1133:2: iv_ruleDatatypeString= ruleDatatypeString EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDatatypeStringRule()); 
@@ -3222,7 +3241,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDatatypeString"
-    // InternalRDFTurtle.g:1128:1: ruleDatatypeString returns [EObject current=null] : ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) ) ;
+    // InternalRDFTurtle.g:1139:1: ruleDatatypeString returns [EObject current=null] : ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) ) ;
     public final EObject ruleDatatypeString() throws RecognitionException {
         EObject current = null;
 
@@ -3236,17 +3255,17 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1134:2: ( ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) ) )
-            // InternalRDFTurtle.g:1135:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) )
+            // InternalRDFTurtle.g:1145:2: ( ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) ) )
+            // InternalRDFTurtle.g:1146:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) )
             {
-            // InternalRDFTurtle.g:1135:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) )
-            // InternalRDFTurtle.g:1136:3: ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) )
+            // InternalRDFTurtle.g:1146:2: ( ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) ) )
+            // InternalRDFTurtle.g:1147:3: ( (lv_qutoedString_0_0= ruleQuotedString ) ) otherlv_1= '^^' ( (lv_resource_2_0= ruleiResource ) )
             {
-            // InternalRDFTurtle.g:1136:3: ( (lv_qutoedString_0_0= ruleQuotedString ) )
-            // InternalRDFTurtle.g:1137:4: (lv_qutoedString_0_0= ruleQuotedString )
+            // InternalRDFTurtle.g:1147:3: ( (lv_qutoedString_0_0= ruleQuotedString ) )
+            // InternalRDFTurtle.g:1148:4: (lv_qutoedString_0_0= ruleQuotedString )
             {
-            // InternalRDFTurtle.g:1137:4: (lv_qutoedString_0_0= ruleQuotedString )
-            // InternalRDFTurtle.g:1138:5: lv_qutoedString_0_0= ruleQuotedString
+            // InternalRDFTurtle.g:1148:4: (lv_qutoedString_0_0= ruleQuotedString )
+            // InternalRDFTurtle.g:1149:5: lv_qutoedString_0_0= ruleQuotedString
             {
             if ( state.backtracking==0 ) {
 
@@ -3283,11 +3302,11 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getDatatypeStringAccess().getCircumflexAccentCircumflexAccentKeyword_1());
               		
             }
-            // InternalRDFTurtle.g:1159:3: ( (lv_resource_2_0= ruleiResource ) )
-            // InternalRDFTurtle.g:1160:4: (lv_resource_2_0= ruleiResource )
+            // InternalRDFTurtle.g:1170:3: ( (lv_resource_2_0= ruleiResource ) )
+            // InternalRDFTurtle.g:1171:4: (lv_resource_2_0= ruleiResource )
             {
-            // InternalRDFTurtle.g:1160:4: (lv_resource_2_0= ruleiResource )
-            // InternalRDFTurtle.g:1161:5: lv_resource_2_0= ruleiResource
+            // InternalRDFTurtle.g:1171:4: (lv_resource_2_0= ruleiResource )
+            // InternalRDFTurtle.g:1172:5: lv_resource_2_0= ruleiResource
             {
             if ( state.backtracking==0 ) {
 
@@ -3343,7 +3362,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolean"
-    // InternalRDFTurtle.g:1182:1: entryRuleBoolean returns [String current=null] : iv_ruleBoolean= ruleBoolean EOF ;
+    // InternalRDFTurtle.g:1193:1: entryRuleBoolean returns [String current=null] : iv_ruleBoolean= ruleBoolean EOF ;
     public final String entryRuleBoolean() throws RecognitionException {
         String current = null;
 
@@ -3351,8 +3370,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1182:47: (iv_ruleBoolean= ruleBoolean EOF )
-            // InternalRDFTurtle.g:1183:2: iv_ruleBoolean= ruleBoolean EOF
+            // InternalRDFTurtle.g:1193:47: (iv_ruleBoolean= ruleBoolean EOF )
+            // InternalRDFTurtle.g:1194:2: iv_ruleBoolean= ruleBoolean EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBooleanRule()); 
@@ -3383,7 +3402,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // InternalRDFTurtle.g:1189:1: ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // InternalRDFTurtle.g:1200:1: ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleBoolean() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3393,10 +3412,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1195:2: ( (kw= 'true' | kw= 'false' ) )
-            // InternalRDFTurtle.g:1196:2: (kw= 'true' | kw= 'false' )
+            // InternalRDFTurtle.g:1206:2: ( (kw= 'true' | kw= 'false' ) )
+            // InternalRDFTurtle.g:1207:2: (kw= 'true' | kw= 'false' )
             {
-            // InternalRDFTurtle.g:1196:2: (kw= 'true' | kw= 'false' )
+            // InternalRDFTurtle.g:1207:2: (kw= 'true' | kw= 'false' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -3415,7 +3434,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalRDFTurtle.g:1197:3: kw= 'true'
+                    // InternalRDFTurtle.g:1208:3: kw= 'true'
                     {
                     kw=(Token)match(input,25,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3428,7 +3447,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:1203:3: kw= 'false'
+                    // InternalRDFTurtle.g:1214:3: kw= 'false'
                     {
                     kw=(Token)match(input,26,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3465,7 +3484,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBlank"
-    // InternalRDFTurtle.g:1212:1: entryRuleBlank returns [EObject current=null] : iv_ruleBlank= ruleBlank EOF ;
+    // InternalRDFTurtle.g:1223:1: entryRuleBlank returns [EObject current=null] : iv_ruleBlank= ruleBlank EOF ;
     public final EObject entryRuleBlank() throws RecognitionException {
         EObject current = null;
 
@@ -3473,8 +3492,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1212:46: (iv_ruleBlank= ruleBlank EOF )
-            // InternalRDFTurtle.g:1213:2: iv_ruleBlank= ruleBlank EOF
+            // InternalRDFTurtle.g:1223:46: (iv_ruleBlank= ruleBlank EOF )
+            // InternalRDFTurtle.g:1224:2: iv_ruleBlank= ruleBlank EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBlankRule()); 
@@ -3505,7 +3524,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBlank"
-    // InternalRDFTurtle.g:1219:1: ruleBlank returns [EObject current=null] : ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) ) ;
+    // InternalRDFTurtle.g:1230:1: ruleBlank returns [EObject current=null] : ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) ) ;
     public final EObject ruleBlank() throws RecognitionException {
         EObject current = null;
 
@@ -3523,10 +3542,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1225:2: ( ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) ) )
-            // InternalRDFTurtle.g:1226:2: ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) )
+            // InternalRDFTurtle.g:1236:2: ( ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) ) )
+            // InternalRDFTurtle.g:1237:2: ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) )
             {
-            // InternalRDFTurtle.g:1226:2: ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) )
+            // InternalRDFTurtle.g:1237:2: ( ( (lv_nodeID_0_0= ruleNodeID ) ) | ( (lv_isSquare_1_0= '[]' ) ) | (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' ) | ( (lv_collection_5_0= ruleCollection ) ) )
             int alt13=4;
             switch ( input.LA(1) ) {
             case 32:
@@ -3559,13 +3578,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
             switch (alt13) {
                 case 1 :
-                    // InternalRDFTurtle.g:1227:3: ( (lv_nodeID_0_0= ruleNodeID ) )
+                    // InternalRDFTurtle.g:1238:3: ( (lv_nodeID_0_0= ruleNodeID ) )
                     {
-                    // InternalRDFTurtle.g:1227:3: ( (lv_nodeID_0_0= ruleNodeID ) )
-                    // InternalRDFTurtle.g:1228:4: (lv_nodeID_0_0= ruleNodeID )
+                    // InternalRDFTurtle.g:1238:3: ( (lv_nodeID_0_0= ruleNodeID ) )
+                    // InternalRDFTurtle.g:1239:4: (lv_nodeID_0_0= ruleNodeID )
                     {
-                    // InternalRDFTurtle.g:1228:4: (lv_nodeID_0_0= ruleNodeID )
-                    // InternalRDFTurtle.g:1229:5: lv_nodeID_0_0= ruleNodeID
+                    // InternalRDFTurtle.g:1239:4: (lv_nodeID_0_0= ruleNodeID )
+                    // InternalRDFTurtle.g:1240:5: lv_nodeID_0_0= ruleNodeID
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3600,13 +3619,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:1247:3: ( (lv_isSquare_1_0= '[]' ) )
+                    // InternalRDFTurtle.g:1258:3: ( (lv_isSquare_1_0= '[]' ) )
                     {
-                    // InternalRDFTurtle.g:1247:3: ( (lv_isSquare_1_0= '[]' ) )
-                    // InternalRDFTurtle.g:1248:4: (lv_isSquare_1_0= '[]' )
+                    // InternalRDFTurtle.g:1258:3: ( (lv_isSquare_1_0= '[]' ) )
+                    // InternalRDFTurtle.g:1259:4: (lv_isSquare_1_0= '[]' )
                     {
-                    // InternalRDFTurtle.g:1248:4: (lv_isSquare_1_0= '[]' )
-                    // InternalRDFTurtle.g:1249:5: lv_isSquare_1_0= '[]'
+                    // InternalRDFTurtle.g:1259:4: (lv_isSquare_1_0= '[]' )
+                    // InternalRDFTurtle.g:1260:5: lv_isSquare_1_0= '[]'
                     {
                     lv_isSquare_1_0=(Token)match(input,27,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3632,10 +3651,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalRDFTurtle.g:1262:3: (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' )
+                    // InternalRDFTurtle.g:1273:3: (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' )
                     {
-                    // InternalRDFTurtle.g:1262:3: (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' )
-                    // InternalRDFTurtle.g:1263:4: otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']'
+                    // InternalRDFTurtle.g:1273:3: (otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']' )
+                    // InternalRDFTurtle.g:1274:4: otherlv_2= '[' ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) ) otherlv_4= ']'
                     {
                     otherlv_2=(Token)match(input,28,FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3643,11 +3662,11 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_2, grammarAccess.getBlankAccess().getLeftSquareBracketKeyword_2_0());
                       			
                     }
-                    // InternalRDFTurtle.g:1267:4: ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) )
-                    // InternalRDFTurtle.g:1268:5: (lv_predicateObjectList_3_0= rulePredicateObjectList )
+                    // InternalRDFTurtle.g:1278:4: ( (lv_predicateObjectList_3_0= rulePredicateObjectList ) )
+                    // InternalRDFTurtle.g:1279:5: (lv_predicateObjectList_3_0= rulePredicateObjectList )
                     {
-                    // InternalRDFTurtle.g:1268:5: (lv_predicateObjectList_3_0= rulePredicateObjectList )
-                    // InternalRDFTurtle.g:1269:6: lv_predicateObjectList_3_0= rulePredicateObjectList
+                    // InternalRDFTurtle.g:1279:5: (lv_predicateObjectList_3_0= rulePredicateObjectList )
+                    // InternalRDFTurtle.g:1280:6: lv_predicateObjectList_3_0= rulePredicateObjectList
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3691,13 +3710,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalRDFTurtle.g:1292:3: ( (lv_collection_5_0= ruleCollection ) )
+                    // InternalRDFTurtle.g:1303:3: ( (lv_collection_5_0= ruleCollection ) )
                     {
-                    // InternalRDFTurtle.g:1292:3: ( (lv_collection_5_0= ruleCollection ) )
-                    // InternalRDFTurtle.g:1293:4: (lv_collection_5_0= ruleCollection )
+                    // InternalRDFTurtle.g:1303:3: ( (lv_collection_5_0= ruleCollection ) )
+                    // InternalRDFTurtle.g:1304:4: (lv_collection_5_0= ruleCollection )
                     {
-                    // InternalRDFTurtle.g:1293:4: (lv_collection_5_0= ruleCollection )
-                    // InternalRDFTurtle.g:1294:5: lv_collection_5_0= ruleCollection
+                    // InternalRDFTurtle.g:1304:4: (lv_collection_5_0= ruleCollection )
+                    // InternalRDFTurtle.g:1305:5: lv_collection_5_0= ruleCollection
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3756,7 +3775,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleItemList"
-    // InternalRDFTurtle.g:1315:1: entryRuleItemList returns [EObject current=null] : iv_ruleItemList= ruleItemList EOF ;
+    // InternalRDFTurtle.g:1326:1: entryRuleItemList returns [EObject current=null] : iv_ruleItemList= ruleItemList EOF ;
     public final EObject entryRuleItemList() throws RecognitionException {
         EObject current = null;
 
@@ -3764,8 +3783,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1315:49: (iv_ruleItemList= ruleItemList EOF )
-            // InternalRDFTurtle.g:1316:2: iv_ruleItemList= ruleItemList EOF
+            // InternalRDFTurtle.g:1326:49: (iv_ruleItemList= ruleItemList EOF )
+            // InternalRDFTurtle.g:1327:2: iv_ruleItemList= ruleItemList EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getItemListRule()); 
@@ -3796,7 +3815,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleItemList"
-    // InternalRDFTurtle.g:1322:1: ruleItemList returns [EObject current=null] : ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* ) ;
+    // InternalRDFTurtle.g:1333:1: ruleItemList returns [EObject current=null] : ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* ) ;
     public final EObject ruleItemList() throws RecognitionException {
         EObject current = null;
 
@@ -3809,17 +3828,17 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1328:2: ( ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* ) )
-            // InternalRDFTurtle.g:1329:2: ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* )
+            // InternalRDFTurtle.g:1339:2: ( ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* ) )
+            // InternalRDFTurtle.g:1340:2: ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* )
             {
-            // InternalRDFTurtle.g:1329:2: ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* )
-            // InternalRDFTurtle.g:1330:3: ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )*
+            // InternalRDFTurtle.g:1340:2: ( ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )* )
+            // InternalRDFTurtle.g:1341:3: ( (lv_objects_0_0= ruleObject ) ) ( (lv_objects_1_0= ruleObject ) )*
             {
-            // InternalRDFTurtle.g:1330:3: ( (lv_objects_0_0= ruleObject ) )
-            // InternalRDFTurtle.g:1331:4: (lv_objects_0_0= ruleObject )
+            // InternalRDFTurtle.g:1341:3: ( (lv_objects_0_0= ruleObject ) )
+            // InternalRDFTurtle.g:1342:4: (lv_objects_0_0= ruleObject )
             {
-            // InternalRDFTurtle.g:1331:4: (lv_objects_0_0= ruleObject )
-            // InternalRDFTurtle.g:1332:5: lv_objects_0_0= ruleObject
+            // InternalRDFTurtle.g:1342:4: (lv_objects_0_0= ruleObject )
+            // InternalRDFTurtle.g:1343:5: lv_objects_0_0= ruleObject
             {
             if ( state.backtracking==0 ) {
 
@@ -3850,7 +3869,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRDFTurtle.g:1349:3: ( (lv_objects_1_0= ruleObject ) )*
+            // InternalRDFTurtle.g:1360:3: ( (lv_objects_1_0= ruleObject ) )*
             loop14:
             do {
                 int alt14=2;
@@ -3863,10 +3882,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalRDFTurtle.g:1350:4: (lv_objects_1_0= ruleObject )
+            	    // InternalRDFTurtle.g:1361:4: (lv_objects_1_0= ruleObject )
             	    {
-            	    // InternalRDFTurtle.g:1350:4: (lv_objects_1_0= ruleObject )
-            	    // InternalRDFTurtle.g:1351:5: lv_objects_1_0= ruleObject
+            	    // InternalRDFTurtle.g:1361:4: (lv_objects_1_0= ruleObject )
+            	    // InternalRDFTurtle.g:1362:5: lv_objects_1_0= ruleObject
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -3928,7 +3947,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCollection"
-    // InternalRDFTurtle.g:1372:1: entryRuleCollection returns [EObject current=null] : iv_ruleCollection= ruleCollection EOF ;
+    // InternalRDFTurtle.g:1383:1: entryRuleCollection returns [EObject current=null] : iv_ruleCollection= ruleCollection EOF ;
     public final EObject entryRuleCollection() throws RecognitionException {
         EObject current = null;
 
@@ -3936,8 +3955,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1372:51: (iv_ruleCollection= ruleCollection EOF )
-            // InternalRDFTurtle.g:1373:2: iv_ruleCollection= ruleCollection EOF
+            // InternalRDFTurtle.g:1383:51: (iv_ruleCollection= ruleCollection EOF )
+            // InternalRDFTurtle.g:1384:2: iv_ruleCollection= ruleCollection EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCollectionRule()); 
@@ -3968,7 +3987,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCollection"
-    // InternalRDFTurtle.g:1379:1: ruleCollection returns [EObject current=null] : ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' ) ;
+    // InternalRDFTurtle.g:1390:1: ruleCollection returns [EObject current=null] : ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' ) ;
     public final EObject ruleCollection() throws RecognitionException {
         EObject current = null;
 
@@ -3981,14 +4000,14 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1385:2: ( ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' ) )
-            // InternalRDFTurtle.g:1386:2: ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' )
+            // InternalRDFTurtle.g:1396:2: ( ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' ) )
+            // InternalRDFTurtle.g:1397:2: ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' )
             {
-            // InternalRDFTurtle.g:1386:2: ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' )
-            // InternalRDFTurtle.g:1387:3: () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')'
+            // InternalRDFTurtle.g:1397:2: ( () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')' )
+            // InternalRDFTurtle.g:1398:3: () otherlv_1= '(' ( (lv_itemList_2_0= ruleItemList ) )? otherlv_3= ')'
             {
-            // InternalRDFTurtle.g:1387:3: ()
-            // InternalRDFTurtle.g:1388:4: 
+            // InternalRDFTurtle.g:1398:3: ()
+            // InternalRDFTurtle.g:1399:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4006,7 +4025,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getCollectionAccess().getLeftParenthesisKeyword_1());
               		
             }
-            // InternalRDFTurtle.g:1398:3: ( (lv_itemList_2_0= ruleItemList ) )?
+            // InternalRDFTurtle.g:1409:3: ( (lv_itemList_2_0= ruleItemList ) )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -4015,10 +4034,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // InternalRDFTurtle.g:1399:4: (lv_itemList_2_0= ruleItemList )
+                    // InternalRDFTurtle.g:1410:4: (lv_itemList_2_0= ruleItemList )
                     {
-                    // InternalRDFTurtle.g:1399:4: (lv_itemList_2_0= ruleItemList )
-                    // InternalRDFTurtle.g:1400:5: lv_itemList_2_0= ruleItemList
+                    // InternalRDFTurtle.g:1410:4: (lv_itemList_2_0= ruleItemList )
+                    // InternalRDFTurtle.g:1411:5: lv_itemList_2_0= ruleItemList
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4083,7 +4102,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleiResource"
-    // InternalRDFTurtle.g:1425:1: entryRuleiResource returns [EObject current=null] : iv_ruleiResource= ruleiResource EOF ;
+    // InternalRDFTurtle.g:1436:1: entryRuleiResource returns [EObject current=null] : iv_ruleiResource= ruleiResource EOF ;
     public final EObject entryRuleiResource() throws RecognitionException {
         EObject current = null;
 
@@ -4091,8 +4110,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1425:50: (iv_ruleiResource= ruleiResource EOF )
-            // InternalRDFTurtle.g:1426:2: iv_ruleiResource= ruleiResource EOF
+            // InternalRDFTurtle.g:1436:50: (iv_ruleiResource= ruleiResource EOF )
+            // InternalRDFTurtle.g:1437:2: iv_ruleiResource= ruleiResource EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIResourceRule()); 
@@ -4123,7 +4142,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleiResource"
-    // InternalRDFTurtle.g:1432:1: ruleiResource returns [EObject current=null] : ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) ) ;
+    // InternalRDFTurtle.g:1443:1: ruleiResource returns [EObject current=null] : ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) ) ;
     public final EObject ruleiResource() throws RecognitionException {
         EObject current = null;
 
@@ -4135,10 +4154,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1438:2: ( ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) ) )
-            // InternalRDFTurtle.g:1439:2: ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) )
+            // InternalRDFTurtle.g:1449:2: ( ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) ) )
+            // InternalRDFTurtle.g:1450:2: ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) )
             {
-            // InternalRDFTurtle.g:1439:2: ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) )
+            // InternalRDFTurtle.g:1450:2: ( ( (lv_iriRef_0_0= RULE_IRIREF ) ) | ( (lv_qname_1_0= ruleQname ) ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -4157,13 +4176,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalRDFTurtle.g:1440:3: ( (lv_iriRef_0_0= RULE_IRIREF ) )
+                    // InternalRDFTurtle.g:1451:3: ( (lv_iriRef_0_0= RULE_IRIREF ) )
                     {
-                    // InternalRDFTurtle.g:1440:3: ( (lv_iriRef_0_0= RULE_IRIREF ) )
-                    // InternalRDFTurtle.g:1441:4: (lv_iriRef_0_0= RULE_IRIREF )
+                    // InternalRDFTurtle.g:1451:3: ( (lv_iriRef_0_0= RULE_IRIREF ) )
+                    // InternalRDFTurtle.g:1452:4: (lv_iriRef_0_0= RULE_IRIREF )
                     {
-                    // InternalRDFTurtle.g:1441:4: (lv_iriRef_0_0= RULE_IRIREF )
-                    // InternalRDFTurtle.g:1442:5: lv_iriRef_0_0= RULE_IRIREF
+                    // InternalRDFTurtle.g:1452:4: (lv_iriRef_0_0= RULE_IRIREF )
+                    // InternalRDFTurtle.g:1453:5: lv_iriRef_0_0= RULE_IRIREF
                     {
                     lv_iriRef_0_0=(Token)match(input,RULE_IRIREF,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4193,13 +4212,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:1459:3: ( (lv_qname_1_0= ruleQname ) )
+                    // InternalRDFTurtle.g:1470:3: ( (lv_qname_1_0= ruleQname ) )
                     {
-                    // InternalRDFTurtle.g:1459:3: ( (lv_qname_1_0= ruleQname ) )
-                    // InternalRDFTurtle.g:1460:4: (lv_qname_1_0= ruleQname )
+                    // InternalRDFTurtle.g:1470:3: ( (lv_qname_1_0= ruleQname ) )
+                    // InternalRDFTurtle.g:1471:4: (lv_qname_1_0= ruleQname )
                     {
-                    // InternalRDFTurtle.g:1460:4: (lv_qname_1_0= ruleQname )
-                    // InternalRDFTurtle.g:1461:5: lv_qname_1_0= ruleQname
+                    // InternalRDFTurtle.g:1471:4: (lv_qname_1_0= ruleQname )
+                    // InternalRDFTurtle.g:1472:5: lv_qname_1_0= ruleQname
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4258,7 +4277,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNodeID"
-    // InternalRDFTurtle.g:1482:1: entryRuleNodeID returns [EObject current=null] : iv_ruleNodeID= ruleNodeID EOF ;
+    // InternalRDFTurtle.g:1493:1: entryRuleNodeID returns [EObject current=null] : iv_ruleNodeID= ruleNodeID EOF ;
     public final EObject entryRuleNodeID() throws RecognitionException {
         EObject current = null;
 
@@ -4266,8 +4285,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1482:47: (iv_ruleNodeID= ruleNodeID EOF )
-            // InternalRDFTurtle.g:1483:2: iv_ruleNodeID= ruleNodeID EOF
+            // InternalRDFTurtle.g:1493:47: (iv_ruleNodeID= ruleNodeID EOF )
+            // InternalRDFTurtle.g:1494:2: iv_ruleNodeID= ruleNodeID EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNodeIDRule()); 
@@ -4298,7 +4317,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNodeID"
-    // InternalRDFTurtle.g:1489:1: ruleNodeID returns [EObject current=null] : (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalRDFTurtle.g:1500:1: ruleNodeID returns [EObject current=null] : (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleNodeID() throws RecognitionException {
         EObject current = null;
 
@@ -4309,11 +4328,11 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1495:2: ( (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalRDFTurtle.g:1496:2: (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalRDFTurtle.g:1506:2: ( (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalRDFTurtle.g:1507:2: (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalRDFTurtle.g:1496:2: (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalRDFTurtle.g:1497:3: otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) )
+            // InternalRDFTurtle.g:1507:2: (otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalRDFTurtle.g:1508:3: otherlv_0= '_:' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,32,FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4321,11 +4340,11 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getNodeIDAccess().get_Keyword_0());
               		
             }
-            // InternalRDFTurtle.g:1501:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalRDFTurtle.g:1502:4: (lv_name_1_0= RULE_ID )
+            // InternalRDFTurtle.g:1512:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalRDFTurtle.g:1513:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalRDFTurtle.g:1502:4: (lv_name_1_0= RULE_ID )
-            // InternalRDFTurtle.g:1503:5: lv_name_1_0= RULE_ID
+            // InternalRDFTurtle.g:1513:4: (lv_name_1_0= RULE_ID )
+            // InternalRDFTurtle.g:1514:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4376,7 +4395,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQname"
-    // InternalRDFTurtle.g:1523:1: entryRuleQname returns [EObject current=null] : iv_ruleQname= ruleQname EOF ;
+    // InternalRDFTurtle.g:1534:1: entryRuleQname returns [EObject current=null] : iv_ruleQname= ruleQname EOF ;
     public final EObject entryRuleQname() throws RecognitionException {
         EObject current = null;
 
@@ -4384,8 +4403,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1523:46: (iv_ruleQname= ruleQname EOF )
-            // InternalRDFTurtle.g:1524:2: iv_ruleQname= ruleQname EOF
+            // InternalRDFTurtle.g:1534:46: (iv_ruleQname= ruleQname EOF )
+            // InternalRDFTurtle.g:1535:2: iv_ruleQname= ruleQname EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQnameRule()); 
@@ -4416,7 +4435,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQname"
-    // InternalRDFTurtle.g:1530:1: ruleQname returns [EObject current=null] : ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? ) ;
+    // InternalRDFTurtle.g:1541:1: ruleQname returns [EObject current=null] : ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? ) ;
     public final EObject ruleQname() throws RecognitionException {
         EObject current = null;
 
@@ -4428,14 +4447,14 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1536:2: ( ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? ) )
-            // InternalRDFTurtle.g:1537:2: ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? )
+            // InternalRDFTurtle.g:1547:2: ( ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? ) )
+            // InternalRDFTurtle.g:1548:2: ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? )
             {
-            // InternalRDFTurtle.g:1537:2: ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? )
-            // InternalRDFTurtle.g:1538:3: () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )?
+            // InternalRDFTurtle.g:1548:2: ( () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )? )
+            // InternalRDFTurtle.g:1549:3: () ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) ) ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )?
             {
-            // InternalRDFTurtle.g:1538:3: ()
-            // InternalRDFTurtle.g:1539:4: 
+            // InternalRDFTurtle.g:1549:3: ()
+            // InternalRDFTurtle.g:1550:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4447,11 +4466,11 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRDFTurtle.g:1545:3: ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) )
-            // InternalRDFTurtle.g:1546:4: ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName )
+            // InternalRDFTurtle.g:1556:3: ( ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName ) )
+            // InternalRDFTurtle.g:1557:4: ( ( rulePrefixName ) )=> (lv_prefixName_1_0= rulePrefixName )
             {
-            // InternalRDFTurtle.g:1550:4: (lv_prefixName_1_0= rulePrefixName )
-            // InternalRDFTurtle.g:1551:5: lv_prefixName_1_0= rulePrefixName
+            // InternalRDFTurtle.g:1561:4: (lv_prefixName_1_0= rulePrefixName )
+            // InternalRDFTurtle.g:1562:5: lv_prefixName_1_0= rulePrefixName
             {
             if ( state.backtracking==0 ) {
 
@@ -4482,7 +4501,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalRDFTurtle.g:1568:3: ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )?
+            // InternalRDFTurtle.g:1579:3: ( ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID ) )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -4495,10 +4514,10 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // InternalRDFTurtle.g:1569:4: ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID )
+                    // InternalRDFTurtle.g:1580:4: ( ( RULE_ID ) )=> (lv_name_2_0= RULE_ID )
                     {
-                    // InternalRDFTurtle.g:1573:4: (lv_name_2_0= RULE_ID )
-                    // InternalRDFTurtle.g:1574:5: lv_name_2_0= RULE_ID
+                    // InternalRDFTurtle.g:1584:4: (lv_name_2_0= RULE_ID )
+                    // InternalRDFTurtle.g:1585:5: lv_name_2_0= RULE_ID
                     {
                     lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4552,7 +4571,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrefixName"
-    // InternalRDFTurtle.g:1594:1: entryRulePrefixName returns [String current=null] : iv_rulePrefixName= rulePrefixName EOF ;
+    // InternalRDFTurtle.g:1605:1: entryRulePrefixName returns [String current=null] : iv_rulePrefixName= rulePrefixName EOF ;
     public final String entryRulePrefixName() throws RecognitionException {
         String current = null;
 
@@ -4560,8 +4579,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1594:50: (iv_rulePrefixName= rulePrefixName EOF )
-            // InternalRDFTurtle.g:1595:2: iv_rulePrefixName= rulePrefixName EOF
+            // InternalRDFTurtle.g:1605:50: (iv_rulePrefixName= rulePrefixName EOF )
+            // InternalRDFTurtle.g:1606:2: iv_rulePrefixName= rulePrefixName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrefixNameRule()); 
@@ -4592,7 +4611,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrefixName"
-    // InternalRDFTurtle.g:1601:1: rulePrefixName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID )? kw= ':' ) ;
+    // InternalRDFTurtle.g:1612:1: rulePrefixName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID )? kw= ':' ) ;
     public final AntlrDatatypeRuleToken rulePrefixName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4603,13 +4622,13 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1607:2: ( ( (this_ID_0= RULE_ID )? kw= ':' ) )
-            // InternalRDFTurtle.g:1608:2: ( (this_ID_0= RULE_ID )? kw= ':' )
+            // InternalRDFTurtle.g:1618:2: ( ( (this_ID_0= RULE_ID )? kw= ':' ) )
+            // InternalRDFTurtle.g:1619:2: ( (this_ID_0= RULE_ID )? kw= ':' )
             {
-            // InternalRDFTurtle.g:1608:2: ( (this_ID_0= RULE_ID )? kw= ':' )
-            // InternalRDFTurtle.g:1609:3: (this_ID_0= RULE_ID )? kw= ':'
+            // InternalRDFTurtle.g:1619:2: ( (this_ID_0= RULE_ID )? kw= ':' )
+            // InternalRDFTurtle.g:1620:3: (this_ID_0= RULE_ID )? kw= ':'
             {
-            // InternalRDFTurtle.g:1609:3: (this_ID_0= RULE_ID )?
+            // InternalRDFTurtle.g:1620:3: (this_ID_0= RULE_ID )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -4618,7 +4637,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // InternalRDFTurtle.g:1610:4: this_ID_0= RULE_ID
+                    // InternalRDFTurtle.g:1621:4: this_ID_0= RULE_ID
                     {
                     this_ID_0=(Token)match(input,RULE_ID,FOLLOW_19); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4669,7 +4688,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQuotedString"
-    // InternalRDFTurtle.g:1627:1: entryRuleQuotedString returns [String current=null] : iv_ruleQuotedString= ruleQuotedString EOF ;
+    // InternalRDFTurtle.g:1638:1: entryRuleQuotedString returns [String current=null] : iv_ruleQuotedString= ruleQuotedString EOF ;
     public final String entryRuleQuotedString() throws RecognitionException {
         String current = null;
 
@@ -4677,8 +4696,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalRDFTurtle.g:1627:52: (iv_ruleQuotedString= ruleQuotedString EOF )
-            // InternalRDFTurtle.g:1628:2: iv_ruleQuotedString= ruleQuotedString EOF
+            // InternalRDFTurtle.g:1638:52: (iv_ruleQuotedString= ruleQuotedString EOF )
+            // InternalRDFTurtle.g:1639:2: iv_ruleQuotedString= ruleQuotedString EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQuotedStringRule()); 
@@ -4709,7 +4728,7 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQuotedString"
-    // InternalRDFTurtle.g:1634:1: ruleQuotedString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
+    // InternalRDFTurtle.g:1645:1: ruleQuotedString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
     public final AntlrDatatypeRuleToken ruleQuotedString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4719,8 +4738,8 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalRDFTurtle.g:1640:2: (this_STRING_0= RULE_STRING )
-            // InternalRDFTurtle.g:1641:2: this_STRING_0= RULE_STRING
+            // InternalRDFTurtle.g:1651:2: (this_STRING_0= RULE_STRING )
+            // InternalRDFTurtle.g:1652:2: this_STRING_0= RULE_STRING
             {
             this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4755,11 +4774,11 @@ public class InternalRDFTurtleParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred2_InternalRDFTurtle
     public final void synpred2_InternalRDFTurtle_fragment() throws RecognitionException {   
-        // InternalRDFTurtle.g:1569:4: ( ( RULE_ID ) )
-        // InternalRDFTurtle.g:1569:5: ( RULE_ID )
+        // InternalRDFTurtle.g:1580:4: ( ( RULE_ID ) )
+        // InternalRDFTurtle.g:1580:5: ( RULE_ID )
         {
-        // InternalRDFTurtle.g:1569:5: ( RULE_ID )
-        // InternalRDFTurtle.g:1570:5: RULE_ID
+        // InternalRDFTurtle.g:1580:5: ( RULE_ID )
+        // InternalRDFTurtle.g:1581:5: RULE_ID
         {
         match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
 

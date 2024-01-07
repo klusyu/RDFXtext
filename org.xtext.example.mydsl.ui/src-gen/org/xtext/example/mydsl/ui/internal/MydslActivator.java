@@ -13,10 +13,10 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.shared.SharedStateModule;
 import org.eclipse.xtext.util.Modules2;
 import org.osgi.framework.BundleContext;
-import org.xtext.example.mydsl.NewTurtleRuntimeModule;
 import org.xtext.example.mydsl.RDFTurtleRuntimeModule;
-import org.xtext.example.mydsl.ui.NewTurtleUiModule;
+import org.xtext.example.mydsl.SparqlRuntimeModule;
 import org.xtext.example.mydsl.ui.RDFTurtleUiModule;
+import org.xtext.example.mydsl.ui.SparqlUiModule;
 
 /**
  * This class was generated. Customizations should only happen in a newly
@@ -26,7 +26,7 @@ public class MydslActivator extends AbstractUIPlugin {
 
 	public static final String PLUGIN_ID = "org.xtext.example.mydsl.ui";
 	public static final String ORG_XTEXT_EXAMPLE_MYDSL_RDFTURTLE = "org.xtext.example.mydsl.RDFTurtle";
-	public static final String ORG_XTEXT_EXAMPLE_MYDSL_NEWTURTLE = "org.xtext.example.mydsl.NewTurtle";
+	public static final String ORG_XTEXT_EXAMPLE_MYDSL_SPARQL = "org.xtext.example.mydsl.Sparql";
 	
 	private static final Logger logger = Logger.getLogger(MydslActivator.class);
 	
@@ -79,8 +79,8 @@ public class MydslActivator extends AbstractUIPlugin {
 		if (ORG_XTEXT_EXAMPLE_MYDSL_RDFTURTLE.equals(grammar)) {
 			return new RDFTurtleRuntimeModule();
 		}
-		if (ORG_XTEXT_EXAMPLE_MYDSL_NEWTURTLE.equals(grammar)) {
-			return new NewTurtleRuntimeModule();
+		if (ORG_XTEXT_EXAMPLE_MYDSL_SPARQL.equals(grammar)) {
+			return new SparqlRuntimeModule();
 		}
 		throw new IllegalArgumentException(grammar);
 	}
@@ -89,8 +89,8 @@ public class MydslActivator extends AbstractUIPlugin {
 		if (ORG_XTEXT_EXAMPLE_MYDSL_RDFTURTLE.equals(grammar)) {
 			return new RDFTurtleUiModule(this);
 		}
-		if (ORG_XTEXT_EXAMPLE_MYDSL_NEWTURTLE.equals(grammar)) {
-			return new NewTurtleUiModule(this);
+		if (ORG_XTEXT_EXAMPLE_MYDSL_SPARQL.equals(grammar)) {
+			return new SparqlUiModule(this);
 		}
 		throw new IllegalArgumentException(grammar);
 	}

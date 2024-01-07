@@ -832,14 +832,25 @@ rulePredicate returns [EObject current=null]
 @after {
 	leaveRule();
 }:
-	{
-		newCompositeNode(grammarAccess.getPredicateAccess().getIResourceParserRuleCall());
-	}
-	this_iResource_0=ruleiResource
-	{
-		$current = $this_iResource_0.current;
-		afterParserOrEnumRuleCall();
-	}
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getPredicateAccess().getIrIResourceParserRuleCall_0());
+			}
+			lv_ir_0_0=ruleiResource
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getPredicateRule());
+				}
+				set(
+					$current,
+					"ir",
+					lv_ir_0_0,
+					"org.xtext.example.mydsl.RDFTurtle.iResource");
+				afterParserOrEnumRuleCall();
+			}
+		)
+	)
 ;
 
 // Entry rule entryRuleObject

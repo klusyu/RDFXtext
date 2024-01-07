@@ -423,15 +423,19 @@ public class RDFTurtleGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	public class PredicateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.RDFTurtle.Predicate");
-		private final RuleCall cIResourceParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Assignment cIrAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cIrIResourceParserRuleCall_0 = (RuleCall)cIrAssignment.eContents().get(0);
 		
 		//Predicate returns iResource:
-		//    iResource
+		//    ir=iResource
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//ir=iResource
+		public Assignment getIrAssignment() { return cIrAssignment; }
+		
 		//iResource
-		public RuleCall getIResourceParserRuleCall() { return cIResourceParserRuleCall; }
+		public RuleCall getIrIResourceParserRuleCall_0() { return cIrIResourceParserRuleCall_0; }
 	}
 	public class ObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.RDFTurtle.Object");
@@ -1103,7 +1107,7 @@ public class RDFTurtleGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	
 	//Predicate returns iResource:
-	//    iResource
+	//    ir=iResource
 	//;
 	public PredicateElements getPredicateAccess() {
 		return pPredicate;

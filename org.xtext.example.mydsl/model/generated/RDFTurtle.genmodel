@@ -56,6 +56,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RDFTurtle.ecore#//Subject/blank"/>
     </genClasses>
     <genClasses ecoreClass="RDFTurtle.ecore#//iResource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RDFTurtle.ecore#//iResource/ir"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RDFTurtle.ecore#//iResource/iriRef"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RDFTurtle.ecore#//iResource/qname"/>
     </genClasses>

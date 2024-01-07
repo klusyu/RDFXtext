@@ -679,9 +679,20 @@ public class RDFTurtlePackageImpl extends EPackageImpl implements RDFTurtlePacka
    * @generated
    */
   @Override
+  public EReference getiResource_Ir()
+  {
+    return (EReference)iResourceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EAttribute getiResource_IriRef()
   {
-    return (EAttribute)iResourceEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)iResourceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -692,7 +703,7 @@ public class RDFTurtlePackageImpl extends EPackageImpl implements RDFTurtlePacka
   @Override
   public EReference getiResource_Qname()
   {
-    return (EReference)iResourceEClass.getEStructuralFeatures().get(1);
+    return (EReference)iResourceEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1117,6 +1128,7 @@ public class RDFTurtlePackageImpl extends EPackageImpl implements RDFTurtlePacka
     createEReference(subjectEClass, SUBJECT__BLANK);
 
     iResourceEClass = createEClass(IRESOURCE);
+    createEReference(iResourceEClass, IRESOURCE__IR);
     createEAttribute(iResourceEClass, IRESOURCE__IRI_REF);
     createEReference(iResourceEClass, IRESOURCE__QNAME);
 
@@ -1242,6 +1254,7 @@ public class RDFTurtlePackageImpl extends EPackageImpl implements RDFTurtlePacka
     initEReference(getSubject_Blank(), this.getBlank(), null, "blank", null, 0, 1, Subject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(iResourceEClass, iResource.class, "iResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getiResource_Ir(), this.getiResource(), null, "ir", null, 0, 1, iResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getiResource_IriRef(), ecorePackage.getEString(), "iriRef", null, 0, 1, iResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getiResource_Qname(), this.getQname(), null, "qname", null, 0, 1, iResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

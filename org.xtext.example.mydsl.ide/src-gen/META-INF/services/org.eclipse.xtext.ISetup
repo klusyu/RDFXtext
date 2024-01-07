@@ -1,2 +1,2 @@
 org.xtext.example.mydsl.ide.RDFTurtleIdeSetup
-org.xtext.example.mydsl.ide.NewTurtleIdeSetup
+org.xtext.example.mydsl.ide.SparqlIdeSetup

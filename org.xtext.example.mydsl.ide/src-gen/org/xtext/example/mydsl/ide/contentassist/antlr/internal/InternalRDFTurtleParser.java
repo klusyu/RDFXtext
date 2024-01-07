@@ -1250,28 +1250,34 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rulePredicate"
-    // InternalRDFTurtle.g:388:1: rulePredicate : ( ruleiResource ) ;
+    // InternalRDFTurtle.g:388:1: rulePredicate : ( ( rule__Predicate__IrAssignment ) ) ;
     public final void rulePredicate() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:392:2: ( ( ruleiResource ) )
-            // InternalRDFTurtle.g:393:2: ( ruleiResource )
+            // InternalRDFTurtle.g:392:2: ( ( ( rule__Predicate__IrAssignment ) ) )
+            // InternalRDFTurtle.g:393:2: ( ( rule__Predicate__IrAssignment ) )
             {
-            // InternalRDFTurtle.g:393:2: ( ruleiResource )
-            // InternalRDFTurtle.g:394:3: ruleiResource
+            // InternalRDFTurtle.g:393:2: ( ( rule__Predicate__IrAssignment ) )
+            // InternalRDFTurtle.g:394:3: ( rule__Predicate__IrAssignment )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getPredicateAccess().getIResourceParserRuleCall()); 
+               before(grammarAccess.getPredicateAccess().getIrAssignment()); 
             }
+            // InternalRDFTurtle.g:395:3: ( rule__Predicate__IrAssignment )
+            // InternalRDFTurtle.g:395:4: rule__Predicate__IrAssignment
+            {
             pushFollow(FOLLOW_2);
-            ruleiResource();
+            rule__Predicate__IrAssignment();
 
             state._fsp--;
             if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getPredicateAccess().getIResourceParserRuleCall()); 
+               after(grammarAccess.getPredicateAccess().getIrAssignment()); 
             }
 
             }
@@ -8841,9 +8847,9 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__Subject__BlankAssignment_1"
 
 
-    // $ANTLR start "rule__Object__ResourceAssignment_0"
-    // InternalRDFTurtle.g:2646:1: rule__Object__ResourceAssignment_0 : ( ruleiResource ) ;
-    public final void rule__Object__ResourceAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Predicate__IrAssignment"
+    // InternalRDFTurtle.g:2646:1: rule__Predicate__IrAssignment : ( ruleiResource ) ;
+    public final void rule__Predicate__IrAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8853,6 +8859,51 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
             {
             // InternalRDFTurtle.g:2651:2: ( ruleiResource )
             // InternalRDFTurtle.g:2652:3: ruleiResource
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getPredicateAccess().getIrIResourceParserRuleCall_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleiResource();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getPredicateAccess().getIrIResourceParserRuleCall_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Predicate__IrAssignment"
+
+
+    // $ANTLR start "rule__Object__ResourceAssignment_0"
+    // InternalRDFTurtle.g:2661:1: rule__Object__ResourceAssignment_0 : ( ruleiResource ) ;
+    public final void rule__Object__ResourceAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRDFTurtle.g:2665:1: ( ( ruleiResource ) )
+            // InternalRDFTurtle.g:2666:2: ( ruleiResource )
+            {
+            // InternalRDFTurtle.g:2666:2: ( ruleiResource )
+            // InternalRDFTurtle.g:2667:3: ruleiResource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getObjectAccess().getResourceIResourceParserRuleCall_0_0()); 
@@ -8887,17 +8938,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Object__BlankAssignment_1"
-    // InternalRDFTurtle.g:2661:1: rule__Object__BlankAssignment_1 : ( ruleBlank ) ;
+    // InternalRDFTurtle.g:2676:1: rule__Object__BlankAssignment_1 : ( ruleBlank ) ;
     public final void rule__Object__BlankAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2665:1: ( ( ruleBlank ) )
-            // InternalRDFTurtle.g:2666:2: ( ruleBlank )
+            // InternalRDFTurtle.g:2680:1: ( ( ruleBlank ) )
+            // InternalRDFTurtle.g:2681:2: ( ruleBlank )
             {
-            // InternalRDFTurtle.g:2666:2: ( ruleBlank )
-            // InternalRDFTurtle.g:2667:3: ruleBlank
+            // InternalRDFTurtle.g:2681:2: ( ruleBlank )
+            // InternalRDFTurtle.g:2682:3: ruleBlank
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getObjectAccess().getBlankBlankParserRuleCall_1_0()); 
@@ -8932,17 +8983,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Object__LiteralAssignment_2"
-    // InternalRDFTurtle.g:2676:1: rule__Object__LiteralAssignment_2 : ( ruleLiteral ) ;
+    // InternalRDFTurtle.g:2691:1: rule__Object__LiteralAssignment_2 : ( ruleLiteral ) ;
     public final void rule__Object__LiteralAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2680:1: ( ( ruleLiteral ) )
-            // InternalRDFTurtle.g:2681:2: ( ruleLiteral )
+            // InternalRDFTurtle.g:2695:1: ( ( ruleLiteral ) )
+            // InternalRDFTurtle.g:2696:2: ( ruleLiteral )
             {
-            // InternalRDFTurtle.g:2681:2: ( ruleLiteral )
-            // InternalRDFTurtle.g:2682:3: ruleLiteral
+            // InternalRDFTurtle.g:2696:2: ( ruleLiteral )
+            // InternalRDFTurtle.g:2697:3: ruleLiteral
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getObjectAccess().getLiteralLiteralParserRuleCall_2_0()); 
@@ -8977,17 +9028,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__LanguageString__QutoedStringAssignment_0"
-    // InternalRDFTurtle.g:2691:1: rule__LanguageString__QutoedStringAssignment_0 : ( ruleQuotedString ) ;
+    // InternalRDFTurtle.g:2706:1: rule__LanguageString__QutoedStringAssignment_0 : ( ruleQuotedString ) ;
     public final void rule__LanguageString__QutoedStringAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2695:1: ( ( ruleQuotedString ) )
-            // InternalRDFTurtle.g:2696:2: ( ruleQuotedString )
+            // InternalRDFTurtle.g:2710:1: ( ( ruleQuotedString ) )
+            // InternalRDFTurtle.g:2711:2: ( ruleQuotedString )
             {
-            // InternalRDFTurtle.g:2696:2: ( ruleQuotedString )
-            // InternalRDFTurtle.g:2697:3: ruleQuotedString
+            // InternalRDFTurtle.g:2711:2: ( ruleQuotedString )
+            // InternalRDFTurtle.g:2712:3: ruleQuotedString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLanguageStringAccess().getQutoedStringQuotedStringParserRuleCall_0_0()); 
@@ -9022,17 +9073,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__LanguageString__LangAssignment_1_1"
-    // InternalRDFTurtle.g:2706:1: rule__LanguageString__LangAssignment_1_1 : ( RULE_ID ) ;
+    // InternalRDFTurtle.g:2721:1: rule__LanguageString__LangAssignment_1_1 : ( RULE_ID ) ;
     public final void rule__LanguageString__LangAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2710:1: ( ( RULE_ID ) )
-            // InternalRDFTurtle.g:2711:2: ( RULE_ID )
+            // InternalRDFTurtle.g:2725:1: ( ( RULE_ID ) )
+            // InternalRDFTurtle.g:2726:2: ( RULE_ID )
             {
-            // InternalRDFTurtle.g:2711:2: ( RULE_ID )
-            // InternalRDFTurtle.g:2712:3: RULE_ID
+            // InternalRDFTurtle.g:2726:2: ( RULE_ID )
+            // InternalRDFTurtle.g:2727:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLanguageStringAccess().getLangIDTerminalRuleCall_1_1_0()); 
@@ -9063,17 +9114,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Literal__LanguageStringAssignment_0"
-    // InternalRDFTurtle.g:2721:1: rule__Literal__LanguageStringAssignment_0 : ( ruleLanguageString ) ;
+    // InternalRDFTurtle.g:2736:1: rule__Literal__LanguageStringAssignment_0 : ( ruleLanguageString ) ;
     public final void rule__Literal__LanguageStringAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2725:1: ( ( ruleLanguageString ) )
-            // InternalRDFTurtle.g:2726:2: ( ruleLanguageString )
+            // InternalRDFTurtle.g:2740:1: ( ( ruleLanguageString ) )
+            // InternalRDFTurtle.g:2741:2: ( ruleLanguageString )
             {
-            // InternalRDFTurtle.g:2726:2: ( ruleLanguageString )
-            // InternalRDFTurtle.g:2727:3: ruleLanguageString
+            // InternalRDFTurtle.g:2741:2: ( ruleLanguageString )
+            // InternalRDFTurtle.g:2742:3: ruleLanguageString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getLanguageStringLanguageStringParserRuleCall_0_0()); 
@@ -9108,17 +9159,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Literal__DatatypeStringAssignment_1"
-    // InternalRDFTurtle.g:2736:1: rule__Literal__DatatypeStringAssignment_1 : ( ruleDatatypeString ) ;
+    // InternalRDFTurtle.g:2751:1: rule__Literal__DatatypeStringAssignment_1 : ( ruleDatatypeString ) ;
     public final void rule__Literal__DatatypeStringAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2740:1: ( ( ruleDatatypeString ) )
-            // InternalRDFTurtle.g:2741:2: ( ruleDatatypeString )
+            // InternalRDFTurtle.g:2755:1: ( ( ruleDatatypeString ) )
+            // InternalRDFTurtle.g:2756:2: ( ruleDatatypeString )
             {
-            // InternalRDFTurtle.g:2741:2: ( ruleDatatypeString )
-            // InternalRDFTurtle.g:2742:3: ruleDatatypeString
+            // InternalRDFTurtle.g:2756:2: ( ruleDatatypeString )
+            // InternalRDFTurtle.g:2757:3: ruleDatatypeString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getDatatypeStringDatatypeStringParserRuleCall_1_0()); 
@@ -9153,17 +9204,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Literal__DwordAssignment_2"
-    // InternalRDFTurtle.g:2751:1: rule__Literal__DwordAssignment_2 : ( RULE_INT ) ;
+    // InternalRDFTurtle.g:2766:1: rule__Literal__DwordAssignment_2 : ( RULE_INT ) ;
     public final void rule__Literal__DwordAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2755:1: ( ( RULE_INT ) )
-            // InternalRDFTurtle.g:2756:2: ( RULE_INT )
+            // InternalRDFTurtle.g:2770:1: ( ( RULE_INT ) )
+            // InternalRDFTurtle.g:2771:2: ( RULE_INT )
             {
-            // InternalRDFTurtle.g:2756:2: ( RULE_INT )
-            // InternalRDFTurtle.g:2757:3: RULE_INT
+            // InternalRDFTurtle.g:2771:2: ( RULE_INT )
+            // InternalRDFTurtle.g:2772:3: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getDwordINTTerminalRuleCall_2_0()); 
@@ -9194,17 +9245,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Literal__RealAssignment_3"
-    // InternalRDFTurtle.g:2766:1: rule__Literal__RealAssignment_3 : ( RULE_DOUBLE ) ;
+    // InternalRDFTurtle.g:2781:1: rule__Literal__RealAssignment_3 : ( RULE_DOUBLE ) ;
     public final void rule__Literal__RealAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2770:1: ( ( RULE_DOUBLE ) )
-            // InternalRDFTurtle.g:2771:2: ( RULE_DOUBLE )
+            // InternalRDFTurtle.g:2785:1: ( ( RULE_DOUBLE ) )
+            // InternalRDFTurtle.g:2786:2: ( RULE_DOUBLE )
             {
-            // InternalRDFTurtle.g:2771:2: ( RULE_DOUBLE )
-            // InternalRDFTurtle.g:2772:3: RULE_DOUBLE
+            // InternalRDFTurtle.g:2786:2: ( RULE_DOUBLE )
+            // InternalRDFTurtle.g:2787:3: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getRealDOUBLETerminalRuleCall_3_0()); 
@@ -9235,17 +9286,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Literal__DecimalAssignment_4"
-    // InternalRDFTurtle.g:2781:1: rule__Literal__DecimalAssignment_4 : ( RULE_DECIMAL ) ;
+    // InternalRDFTurtle.g:2796:1: rule__Literal__DecimalAssignment_4 : ( RULE_DECIMAL ) ;
     public final void rule__Literal__DecimalAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2785:1: ( ( RULE_DECIMAL ) )
-            // InternalRDFTurtle.g:2786:2: ( RULE_DECIMAL )
+            // InternalRDFTurtle.g:2800:1: ( ( RULE_DECIMAL ) )
+            // InternalRDFTurtle.g:2801:2: ( RULE_DECIMAL )
             {
-            // InternalRDFTurtle.g:2786:2: ( RULE_DECIMAL )
-            // InternalRDFTurtle.g:2787:3: RULE_DECIMAL
+            // InternalRDFTurtle.g:2801:2: ( RULE_DECIMAL )
+            // InternalRDFTurtle.g:2802:3: RULE_DECIMAL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getDecimalDECIMALTerminalRuleCall_4_0()); 
@@ -9276,17 +9327,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Literal__BoolAssignment_5"
-    // InternalRDFTurtle.g:2796:1: rule__Literal__BoolAssignment_5 : ( ruleBoolean ) ;
+    // InternalRDFTurtle.g:2811:1: rule__Literal__BoolAssignment_5 : ( ruleBoolean ) ;
     public final void rule__Literal__BoolAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2800:1: ( ( ruleBoolean ) )
-            // InternalRDFTurtle.g:2801:2: ( ruleBoolean )
+            // InternalRDFTurtle.g:2815:1: ( ( ruleBoolean ) )
+            // InternalRDFTurtle.g:2816:2: ( ruleBoolean )
             {
-            // InternalRDFTurtle.g:2801:2: ( ruleBoolean )
-            // InternalRDFTurtle.g:2802:3: ruleBoolean
+            // InternalRDFTurtle.g:2816:2: ( ruleBoolean )
+            // InternalRDFTurtle.g:2817:3: ruleBoolean
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getBoolBooleanParserRuleCall_5_0()); 
@@ -9321,17 +9372,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__DatatypeString__QutoedStringAssignment_0"
-    // InternalRDFTurtle.g:2811:1: rule__DatatypeString__QutoedStringAssignment_0 : ( ruleQuotedString ) ;
+    // InternalRDFTurtle.g:2826:1: rule__DatatypeString__QutoedStringAssignment_0 : ( ruleQuotedString ) ;
     public final void rule__DatatypeString__QutoedStringAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2815:1: ( ( ruleQuotedString ) )
-            // InternalRDFTurtle.g:2816:2: ( ruleQuotedString )
+            // InternalRDFTurtle.g:2830:1: ( ( ruleQuotedString ) )
+            // InternalRDFTurtle.g:2831:2: ( ruleQuotedString )
             {
-            // InternalRDFTurtle.g:2816:2: ( ruleQuotedString )
-            // InternalRDFTurtle.g:2817:3: ruleQuotedString
+            // InternalRDFTurtle.g:2831:2: ( ruleQuotedString )
+            // InternalRDFTurtle.g:2832:3: ruleQuotedString
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDatatypeStringAccess().getQutoedStringQuotedStringParserRuleCall_0_0()); 
@@ -9366,17 +9417,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__DatatypeString__ResourceAssignment_2"
-    // InternalRDFTurtle.g:2826:1: rule__DatatypeString__ResourceAssignment_2 : ( ruleiResource ) ;
+    // InternalRDFTurtle.g:2841:1: rule__DatatypeString__ResourceAssignment_2 : ( ruleiResource ) ;
     public final void rule__DatatypeString__ResourceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2830:1: ( ( ruleiResource ) )
-            // InternalRDFTurtle.g:2831:2: ( ruleiResource )
+            // InternalRDFTurtle.g:2845:1: ( ( ruleiResource ) )
+            // InternalRDFTurtle.g:2846:2: ( ruleiResource )
             {
-            // InternalRDFTurtle.g:2831:2: ( ruleiResource )
-            // InternalRDFTurtle.g:2832:3: ruleiResource
+            // InternalRDFTurtle.g:2846:2: ( ruleiResource )
+            // InternalRDFTurtle.g:2847:3: ruleiResource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDatatypeStringAccess().getResourceIResourceParserRuleCall_2_0()); 
@@ -9411,17 +9462,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Blank__NodeIDAssignment_0"
-    // InternalRDFTurtle.g:2841:1: rule__Blank__NodeIDAssignment_0 : ( ruleNodeID ) ;
+    // InternalRDFTurtle.g:2856:1: rule__Blank__NodeIDAssignment_0 : ( ruleNodeID ) ;
     public final void rule__Blank__NodeIDAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2845:1: ( ( ruleNodeID ) )
-            // InternalRDFTurtle.g:2846:2: ( ruleNodeID )
+            // InternalRDFTurtle.g:2860:1: ( ( ruleNodeID ) )
+            // InternalRDFTurtle.g:2861:2: ( ruleNodeID )
             {
-            // InternalRDFTurtle.g:2846:2: ( ruleNodeID )
-            // InternalRDFTurtle.g:2847:3: ruleNodeID
+            // InternalRDFTurtle.g:2861:2: ( ruleNodeID )
+            // InternalRDFTurtle.g:2862:3: ruleNodeID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlankAccess().getNodeIDNodeIDParserRuleCall_0_0()); 
@@ -9456,23 +9507,23 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Blank__IsSquareAssignment_1"
-    // InternalRDFTurtle.g:2856:1: rule__Blank__IsSquareAssignment_1 : ( ( '[]' ) ) ;
+    // InternalRDFTurtle.g:2871:1: rule__Blank__IsSquareAssignment_1 : ( ( '[]' ) ) ;
     public final void rule__Blank__IsSquareAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2860:1: ( ( ( '[]' ) ) )
-            // InternalRDFTurtle.g:2861:2: ( ( '[]' ) )
+            // InternalRDFTurtle.g:2875:1: ( ( ( '[]' ) ) )
+            // InternalRDFTurtle.g:2876:2: ( ( '[]' ) )
             {
-            // InternalRDFTurtle.g:2861:2: ( ( '[]' ) )
-            // InternalRDFTurtle.g:2862:3: ( '[]' )
+            // InternalRDFTurtle.g:2876:2: ( ( '[]' ) )
+            // InternalRDFTurtle.g:2877:3: ( '[]' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlankAccess().getIsSquareLeftSquareBracketRightSquareBracketKeyword_1_0()); 
             }
-            // InternalRDFTurtle.g:2863:3: ( '[]' )
-            // InternalRDFTurtle.g:2864:4: '[]'
+            // InternalRDFTurtle.g:2878:3: ( '[]' )
+            // InternalRDFTurtle.g:2879:4: '[]'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlankAccess().getIsSquareLeftSquareBracketRightSquareBracketKeyword_1_0()); 
@@ -9509,17 +9560,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Blank__PredicateObjectListAssignment_2_1"
-    // InternalRDFTurtle.g:2875:1: rule__Blank__PredicateObjectListAssignment_2_1 : ( rulePredicateObjectList ) ;
+    // InternalRDFTurtle.g:2890:1: rule__Blank__PredicateObjectListAssignment_2_1 : ( rulePredicateObjectList ) ;
     public final void rule__Blank__PredicateObjectListAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2879:1: ( ( rulePredicateObjectList ) )
-            // InternalRDFTurtle.g:2880:2: ( rulePredicateObjectList )
+            // InternalRDFTurtle.g:2894:1: ( ( rulePredicateObjectList ) )
+            // InternalRDFTurtle.g:2895:2: ( rulePredicateObjectList )
             {
-            // InternalRDFTurtle.g:2880:2: ( rulePredicateObjectList )
-            // InternalRDFTurtle.g:2881:3: rulePredicateObjectList
+            // InternalRDFTurtle.g:2895:2: ( rulePredicateObjectList )
+            // InternalRDFTurtle.g:2896:3: rulePredicateObjectList
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlankAccess().getPredicateObjectListPredicateObjectListParserRuleCall_2_1_0()); 
@@ -9554,17 +9605,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Blank__CollectionAssignment_3"
-    // InternalRDFTurtle.g:2890:1: rule__Blank__CollectionAssignment_3 : ( ruleCollection ) ;
+    // InternalRDFTurtle.g:2905:1: rule__Blank__CollectionAssignment_3 : ( ruleCollection ) ;
     public final void rule__Blank__CollectionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2894:1: ( ( ruleCollection ) )
-            // InternalRDFTurtle.g:2895:2: ( ruleCollection )
+            // InternalRDFTurtle.g:2909:1: ( ( ruleCollection ) )
+            // InternalRDFTurtle.g:2910:2: ( ruleCollection )
             {
-            // InternalRDFTurtle.g:2895:2: ( ruleCollection )
-            // InternalRDFTurtle.g:2896:3: ruleCollection
+            // InternalRDFTurtle.g:2910:2: ( ruleCollection )
+            // InternalRDFTurtle.g:2911:3: ruleCollection
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlankAccess().getCollectionCollectionParserRuleCall_3_0()); 
@@ -9599,17 +9650,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ItemList__ObjectsAssignment_0"
-    // InternalRDFTurtle.g:2905:1: rule__ItemList__ObjectsAssignment_0 : ( ruleObject ) ;
+    // InternalRDFTurtle.g:2920:1: rule__ItemList__ObjectsAssignment_0 : ( ruleObject ) ;
     public final void rule__ItemList__ObjectsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2909:1: ( ( ruleObject ) )
-            // InternalRDFTurtle.g:2910:2: ( ruleObject )
+            // InternalRDFTurtle.g:2924:1: ( ( ruleObject ) )
+            // InternalRDFTurtle.g:2925:2: ( ruleObject )
             {
-            // InternalRDFTurtle.g:2910:2: ( ruleObject )
-            // InternalRDFTurtle.g:2911:3: ruleObject
+            // InternalRDFTurtle.g:2925:2: ( ruleObject )
+            // InternalRDFTurtle.g:2926:3: ruleObject
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getItemListAccess().getObjectsObjectParserRuleCall_0_0()); 
@@ -9644,17 +9695,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ItemList__ObjectsAssignment_1"
-    // InternalRDFTurtle.g:2920:1: rule__ItemList__ObjectsAssignment_1 : ( ruleObject ) ;
+    // InternalRDFTurtle.g:2935:1: rule__ItemList__ObjectsAssignment_1 : ( ruleObject ) ;
     public final void rule__ItemList__ObjectsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2924:1: ( ( ruleObject ) )
-            // InternalRDFTurtle.g:2925:2: ( ruleObject )
+            // InternalRDFTurtle.g:2939:1: ( ( ruleObject ) )
+            // InternalRDFTurtle.g:2940:2: ( ruleObject )
             {
-            // InternalRDFTurtle.g:2925:2: ( ruleObject )
-            // InternalRDFTurtle.g:2926:3: ruleObject
+            // InternalRDFTurtle.g:2940:2: ( ruleObject )
+            // InternalRDFTurtle.g:2941:3: ruleObject
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getItemListAccess().getObjectsObjectParserRuleCall_1_0()); 
@@ -9689,17 +9740,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Collection__ItemListAssignment_2"
-    // InternalRDFTurtle.g:2935:1: rule__Collection__ItemListAssignment_2 : ( ruleItemList ) ;
+    // InternalRDFTurtle.g:2950:1: rule__Collection__ItemListAssignment_2 : ( ruleItemList ) ;
     public final void rule__Collection__ItemListAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2939:1: ( ( ruleItemList ) )
-            // InternalRDFTurtle.g:2940:2: ( ruleItemList )
+            // InternalRDFTurtle.g:2954:1: ( ( ruleItemList ) )
+            // InternalRDFTurtle.g:2955:2: ( ruleItemList )
             {
-            // InternalRDFTurtle.g:2940:2: ( ruleItemList )
-            // InternalRDFTurtle.g:2941:3: ruleItemList
+            // InternalRDFTurtle.g:2955:2: ( ruleItemList )
+            // InternalRDFTurtle.g:2956:3: ruleItemList
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionAccess().getItemListItemListParserRuleCall_2_0()); 
@@ -9734,17 +9785,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__IResource__IriRefAssignment_0"
-    // InternalRDFTurtle.g:2950:1: rule__IResource__IriRefAssignment_0 : ( RULE_IRIREF ) ;
+    // InternalRDFTurtle.g:2965:1: rule__IResource__IriRefAssignment_0 : ( RULE_IRIREF ) ;
     public final void rule__IResource__IriRefAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2954:1: ( ( RULE_IRIREF ) )
-            // InternalRDFTurtle.g:2955:2: ( RULE_IRIREF )
+            // InternalRDFTurtle.g:2969:1: ( ( RULE_IRIREF ) )
+            // InternalRDFTurtle.g:2970:2: ( RULE_IRIREF )
             {
-            // InternalRDFTurtle.g:2955:2: ( RULE_IRIREF )
-            // InternalRDFTurtle.g:2956:3: RULE_IRIREF
+            // InternalRDFTurtle.g:2970:2: ( RULE_IRIREF )
+            // InternalRDFTurtle.g:2971:3: RULE_IRIREF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIResourceAccess().getIriRefIRIREFTerminalRuleCall_0_0()); 
@@ -9775,17 +9826,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__IResource__QnameAssignment_1"
-    // InternalRDFTurtle.g:2965:1: rule__IResource__QnameAssignment_1 : ( ruleQname ) ;
+    // InternalRDFTurtle.g:2980:1: rule__IResource__QnameAssignment_1 : ( ruleQname ) ;
     public final void rule__IResource__QnameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2969:1: ( ( ruleQname ) )
-            // InternalRDFTurtle.g:2970:2: ( ruleQname )
+            // InternalRDFTurtle.g:2984:1: ( ( ruleQname ) )
+            // InternalRDFTurtle.g:2985:2: ( ruleQname )
             {
-            // InternalRDFTurtle.g:2970:2: ( ruleQname )
-            // InternalRDFTurtle.g:2971:3: ruleQname
+            // InternalRDFTurtle.g:2985:2: ( ruleQname )
+            // InternalRDFTurtle.g:2986:3: ruleQname
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIResourceAccess().getQnameQnameParserRuleCall_1_0()); 
@@ -9820,17 +9871,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__NodeID__NameAssignment_1"
-    // InternalRDFTurtle.g:2980:1: rule__NodeID__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalRDFTurtle.g:2995:1: rule__NodeID__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__NodeID__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2984:1: ( ( RULE_ID ) )
-            // InternalRDFTurtle.g:2985:2: ( RULE_ID )
+            // InternalRDFTurtle.g:2999:1: ( ( RULE_ID ) )
+            // InternalRDFTurtle.g:3000:2: ( RULE_ID )
             {
-            // InternalRDFTurtle.g:2985:2: ( RULE_ID )
-            // InternalRDFTurtle.g:2986:3: RULE_ID
+            // InternalRDFTurtle.g:3000:2: ( RULE_ID )
+            // InternalRDFTurtle.g:3001:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNodeIDAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -9861,17 +9912,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Qname__PrefixNameAssignment_1"
-    // InternalRDFTurtle.g:2995:1: rule__Qname__PrefixNameAssignment_1 : ( rulePrefixName ) ;
+    // InternalRDFTurtle.g:3010:1: rule__Qname__PrefixNameAssignment_1 : ( rulePrefixName ) ;
     public final void rule__Qname__PrefixNameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:2999:1: ( ( rulePrefixName ) )
-            // InternalRDFTurtle.g:3000:2: ( rulePrefixName )
+            // InternalRDFTurtle.g:3014:1: ( ( rulePrefixName ) )
+            // InternalRDFTurtle.g:3015:2: ( rulePrefixName )
             {
-            // InternalRDFTurtle.g:3000:2: ( rulePrefixName )
-            // InternalRDFTurtle.g:3001:3: rulePrefixName
+            // InternalRDFTurtle.g:3015:2: ( rulePrefixName )
+            // InternalRDFTurtle.g:3016:3: rulePrefixName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQnameAccess().getPrefixNamePrefixNameParserRuleCall_1_0()); 
@@ -9906,17 +9957,17 @@ public class InternalRDFTurtleParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Qname__NameAssignment_2"
-    // InternalRDFTurtle.g:3010:1: rule__Qname__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalRDFTurtle.g:3025:1: rule__Qname__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Qname__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRDFTurtle.g:3014:1: ( ( RULE_ID ) )
-            // InternalRDFTurtle.g:3015:2: ( RULE_ID )
+            // InternalRDFTurtle.g:3029:1: ( ( RULE_ID ) )
+            // InternalRDFTurtle.g:3030:2: ( RULE_ID )
             {
-            // InternalRDFTurtle.g:3015:2: ( RULE_ID )
-            // InternalRDFTurtle.g:3016:3: RULE_ID
+            // InternalRDFTurtle.g:3030:2: ( RULE_ID )
+            // InternalRDFTurtle.g:3031:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQnameAccess().getNameIDTerminalRuleCall_2_0()); 

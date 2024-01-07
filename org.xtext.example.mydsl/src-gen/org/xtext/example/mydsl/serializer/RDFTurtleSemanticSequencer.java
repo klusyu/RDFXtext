@@ -120,8 +120,15 @@ public class RDFTurtleSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_Verb(context, (Verb) semanticObject); 
 				return; 
 			case RDFTurtlePackage.IRESOURCE:
-				sequence_iResource(context, (iResource) semanticObject); 
-				return; 
+				if (rule == grammarAccess.getPredicateRule()) {
+					sequence_Predicate(context, (iResource) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getIResourceRule()) {
+					sequence_iResource(context, (iResource) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -349,6 +356,26 @@ public class RDFTurtleSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     Predicate returns iResource
+	 *
+	 * Constraint:
+	 *     ir=iResource
+	 * </pre>
+	 */
+	protected void sequence_Predicate(ISerializationContext context, iResource semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, RDFTurtlePackage.Literals.IRESOURCE__IR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RDFTurtlePackage.Literals.IRESOURCE__IR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPredicateAccess().getIrIResourceParserRuleCall_0(), semanticObject.getIr());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     PrefixID returns PrefixID
 	 *
 	 * Constraint:
@@ -508,7 +535,6 @@ public class RDFTurtleSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Predicate returns iResource
 	 *     iResource returns iResource
 	 *
 	 * Constraint:
