@@ -391,9 +391,9 @@ rulePredicate
 	}
 	:
 	(
-		{ before(grammarAccess.getPredicateAccess().getIrAssignment()); }
-		(rule__Predicate__IrAssignment)
-		{ after(grammarAccess.getPredicateAccess().getIrAssignment()); }
+		{ before(grammarAccess.getPredicateAccess().getIResourceParserRuleCall()); }
+		ruleiResource
+		{ after(grammarAccess.getPredicateAccess().getIResourceParserRuleCall()); }
 	)
 ;
 finally {
@@ -2637,21 +2637,6 @@ rule__Subject__BlankAssignment_1
 		{ before(grammarAccess.getSubjectAccess().getBlankBlankParserRuleCall_1_0()); }
 		ruleBlank
 		{ after(grammarAccess.getSubjectAccess().getBlankBlankParserRuleCall_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Predicate__IrAssignment
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getPredicateAccess().getIrIResourceParserRuleCall_0()); }
-		ruleiResource
-		{ after(grammarAccess.getPredicateAccess().getIrIResourceParserRuleCall_0()); }
 	)
 ;
 finally {

@@ -66,8 +66,6 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="iResource">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ir" eType="#//iResource"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="iriRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="qname" eType="#//Qname"
         containment="true"/>

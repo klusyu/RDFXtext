@@ -85,7 +85,6 @@ public class RDFTurtleParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getVerbAccess().getIsAAssignment_1(), "rule__Verb__IsAAssignment_1");
 			builder.put(grammarAccess.getSubjectAccess().getResourceAssignment_0(), "rule__Subject__ResourceAssignment_0");
 			builder.put(grammarAccess.getSubjectAccess().getBlankAssignment_1(), "rule__Subject__BlankAssignment_1");
-			builder.put(grammarAccess.getPredicateAccess().getIrAssignment(), "rule__Predicate__IrAssignment");
 			builder.put(grammarAccess.getObjectAccess().getResourceAssignment_0(), "rule__Object__ResourceAssignment_0");
 			builder.put(grammarAccess.getObjectAccess().getBlankAssignment_1(), "rule__Object__BlankAssignment_1");
 			builder.put(grammarAccess.getObjectAccess().getLiteralAssignment_2(), "rule__Object__LiteralAssignment_2");

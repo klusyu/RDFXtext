@@ -24,7 +24,6 @@ import org.xtext.example.mydsl.rDFTurtle.iResource;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.rDFTurtle.impl.iResourceImpl#getIr <em>Ir</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.rDFTurtle.impl.iResourceImpl#getIriRef <em>Iri Ref</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.rDFTurtle.impl.iResourceImpl#getQname <em>Qname</em>}</li>
  * </ul>
@@ -33,16 +32,6 @@ import org.xtext.example.mydsl.rDFTurtle.iResource;
  */
 public class iResourceImpl extends MinimalEObjectImpl.Container implements iResource
 {
-  /**
-   * The cached value of the '{@link #getIr() <em>Ir</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIr()
-   * @generated
-   * @ordered
-   */
-  protected iResource ir;
-
   /**
    * The default value of the '{@link #getIriRef() <em>Iri Ref</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -92,56 +81,6 @@ public class iResourceImpl extends MinimalEObjectImpl.Container implements iReso
   protected EClass eStaticClass()
   {
     return RDFTurtlePackage.Literals.IRESOURCE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public iResource getIr()
-  {
-    return ir;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetIr(iResource newIr, NotificationChain msgs)
-  {
-    iResource oldIr = ir;
-    ir = newIr;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RDFTurtlePackage.IRESOURCE__IR, oldIr, newIr);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setIr(iResource newIr)
-  {
-    if (newIr != ir)
-    {
-      NotificationChain msgs = null;
-      if (ir != null)
-        msgs = ((InternalEObject)ir).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RDFTurtlePackage.IRESOURCE__IR, null, msgs);
-      if (newIr != null)
-        msgs = ((InternalEObject)newIr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RDFTurtlePackage.IRESOURCE__IR, null, msgs);
-      msgs = basicSetIr(newIr, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RDFTurtlePackage.IRESOURCE__IR, newIr, newIr));
   }
 
   /**
@@ -229,8 +168,6 @@ public class iResourceImpl extends MinimalEObjectImpl.Container implements iReso
   {
     switch (featureID)
     {
-      case RDFTurtlePackage.IRESOURCE__IR:
-        return basicSetIr(null, msgs);
       case RDFTurtlePackage.IRESOURCE__QNAME:
         return basicSetQname(null, msgs);
     }
@@ -247,8 +184,6 @@ public class iResourceImpl extends MinimalEObjectImpl.Container implements iReso
   {
     switch (featureID)
     {
-      case RDFTurtlePackage.IRESOURCE__IR:
-        return getIr();
       case RDFTurtlePackage.IRESOURCE__IRI_REF:
         return getIriRef();
       case RDFTurtlePackage.IRESOURCE__QNAME:
@@ -267,9 +202,6 @@ public class iResourceImpl extends MinimalEObjectImpl.Container implements iReso
   {
     switch (featureID)
     {
-      case RDFTurtlePackage.IRESOURCE__IR:
-        setIr((iResource)newValue);
-        return;
       case RDFTurtlePackage.IRESOURCE__IRI_REF:
         setIriRef((String)newValue);
         return;
@@ -290,9 +222,6 @@ public class iResourceImpl extends MinimalEObjectImpl.Container implements iReso
   {
     switch (featureID)
     {
-      case RDFTurtlePackage.IRESOURCE__IR:
-        setIr((iResource)null);
-        return;
       case RDFTurtlePackage.IRESOURCE__IRI_REF:
         setIriRef(IRI_REF_EDEFAULT);
         return;
@@ -313,8 +242,6 @@ public class iResourceImpl extends MinimalEObjectImpl.Container implements iReso
   {
     switch (featureID)
     {
-      case RDFTurtlePackage.IRESOURCE__IR:
-        return ir != null;
       case RDFTurtlePackage.IRESOURCE__IRI_REF:
         return IRI_REF_EDEFAULT == null ? iriRef != null : !IRI_REF_EDEFAULT.equals(iriRef);
       case RDFTurtlePackage.IRESOURCE__QNAME:

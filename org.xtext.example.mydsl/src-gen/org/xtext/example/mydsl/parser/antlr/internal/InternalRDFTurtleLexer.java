@@ -451,10 +451,10 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1661:13: ( ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT ) )
-            // InternalRDFTurtle.g:1661:15: ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT )
+            // InternalRDFTurtle.g:1650:13: ( ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT ) )
+            // InternalRDFTurtle.g:1650:15: ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT )
             {
-            // InternalRDFTurtle.g:1661:15: ( '-' | '+' )?
+            // InternalRDFTurtle.g:1650:15: ( '-' | '+' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -480,14 +480,14 @@ public class InternalRDFTurtleLexer extends Lexer {
 
             }
 
-            // InternalRDFTurtle.g:1661:26: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT )
+            // InternalRDFTurtle.g:1650:26: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT )
             int alt6=3;
             alt6 = dfa6.predict(input);
             switch (alt6) {
                 case 1 :
-                    // InternalRDFTurtle.g:1661:27: ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT
+                    // InternalRDFTurtle.g:1650:27: ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT
                     {
-                    // InternalRDFTurtle.g:1661:27: ( '0' .. '9' )+
+                    // InternalRDFTurtle.g:1650:27: ( '0' .. '9' )+
                     int cnt2=0;
                     loop2:
                     do {
@@ -501,7 +501,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1661:28: '0' .. '9'
+                    	    // InternalRDFTurtle.g:1650:28: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -518,7 +518,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // InternalRDFTurtle.g:1661:43: ( '0' .. '9' )*
+                    // InternalRDFTurtle.g:1650:43: ( '0' .. '9' )*
                     loop3:
                     do {
                         int alt3=2;
@@ -531,7 +531,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1661:44: '0' .. '9'
+                    	    // InternalRDFTurtle.g:1650:44: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -548,10 +548,10 @@ public class InternalRDFTurtleLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:1661:69: '.' ( '0' .. '9' )+ RULE_EXPONENT
+                    // InternalRDFTurtle.g:1650:69: '.' ( '0' .. '9' )+ RULE_EXPONENT
                     {
                     match('.'); 
-                    // InternalRDFTurtle.g:1661:73: ( '0' .. '9' )+
+                    // InternalRDFTurtle.g:1650:73: ( '0' .. '9' )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -565,7 +565,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1661:74: '0' .. '9'
+                    	    // InternalRDFTurtle.g:1650:74: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -586,9 +586,9 @@ public class InternalRDFTurtleLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalRDFTurtle.g:1661:99: ( '0' .. '9' )+ RULE_EXPONENT
+                    // InternalRDFTurtle.g:1650:99: ( '0' .. '9' )+ RULE_EXPONENT
                     {
-                    // InternalRDFTurtle.g:1661:99: ( '0' .. '9' )+
+                    // InternalRDFTurtle.g:1650:99: ( '0' .. '9' )+
                     int cnt5=0;
                     loop5:
                     do {
@@ -602,7 +602,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1661:100: '0' .. '9'
+                    	    // InternalRDFTurtle.g:1650:100: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -641,10 +641,10 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1663:14: ( ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ ) )
-            // InternalRDFTurtle.g:1663:16: ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ )
+            // InternalRDFTurtle.g:1652:14: ( ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ ) )
+            // InternalRDFTurtle.g:1652:16: ( '-' | '+' )? ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ )
             {
-            // InternalRDFTurtle.g:1663:16: ( '-' | '+' )?
+            // InternalRDFTurtle.g:1652:16: ( '-' | '+' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -670,7 +670,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
             }
 
-            // InternalRDFTurtle.g:1663:27: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ )
+            // InternalRDFTurtle.g:1652:27: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -688,9 +688,9 @@ public class InternalRDFTurtleLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalRDFTurtle.g:1663:28: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+                    // InternalRDFTurtle.g:1652:28: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
                     {
-                    // InternalRDFTurtle.g:1663:28: ( '0' .. '9' )+
+                    // InternalRDFTurtle.g:1652:28: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -704,7 +704,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1663:29: '0' .. '9'
+                    	    // InternalRDFTurtle.g:1652:29: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -721,7 +721,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // InternalRDFTurtle.g:1663:44: ( '0' .. '9' )*
+                    // InternalRDFTurtle.g:1652:44: ( '0' .. '9' )*
                     loop9:
                     do {
                         int alt9=2;
@@ -734,7 +734,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1663:45: '0' .. '9'
+                    	    // InternalRDFTurtle.g:1652:45: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -750,10 +750,10 @@ public class InternalRDFTurtleLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:1663:56: '.' ( '0' .. '9' )+
+                    // InternalRDFTurtle.g:1652:56: '.' ( '0' .. '9' )+
                     {
                     match('.'); 
-                    // InternalRDFTurtle.g:1663:60: ( '0' .. '9' )+
+                    // InternalRDFTurtle.g:1652:60: ( '0' .. '9' )+
                     int cnt10=0;
                     loop10:
                     do {
@@ -767,7 +767,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1663:61: '0' .. '9'
+                    	    // InternalRDFTurtle.g:1652:61: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -803,8 +803,8 @@ public class InternalRDFTurtleLexer extends Lexer {
     // $ANTLR start "RULE_EXPONENT"
     public final void mRULE_EXPONENT() throws RecognitionException {
         try {
-            // InternalRDFTurtle.g:1665:24: ( ( 'e' | 'E' ) ( '-' | '+' )? ( '0' .. '9' )+ )
-            // InternalRDFTurtle.g:1665:26: ( 'e' | 'E' ) ( '-' | '+' )? ( '0' .. '9' )+
+            // InternalRDFTurtle.g:1654:24: ( ( 'e' | 'E' ) ( '-' | '+' )? ( '0' .. '9' )+ )
+            // InternalRDFTurtle.g:1654:26: ( 'e' | 'E' ) ( '-' | '+' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -815,7 +815,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalRDFTurtle.g:1665:36: ( '-' | '+' )?
+            // InternalRDFTurtle.g:1654:36: ( '-' | '+' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -841,7 +841,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
             }
 
-            // InternalRDFTurtle.g:1665:47: ( '0' .. '9' )+
+            // InternalRDFTurtle.g:1654:47: ( '0' .. '9' )+
             int cnt13=0;
             loop13:
             do {
@@ -855,7 +855,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // InternalRDFTurtle.g:1665:48: '0' .. '9'
+            	    // InternalRDFTurtle.g:1654:48: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -885,11 +885,11 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_IRIREF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1667:13: ( '<' ( options {greedy=false; } : . )* '>' )
-            // InternalRDFTurtle.g:1667:15: '<' ( options {greedy=false; } : . )* '>'
+            // InternalRDFTurtle.g:1656:13: ( '<' ( options {greedy=false; } : . )* '>' )
+            // InternalRDFTurtle.g:1656:15: '<' ( options {greedy=false; } : . )* '>'
             {
             match('<'); 
-            // InternalRDFTurtle.g:1667:19: ( options {greedy=false; } : . )*
+            // InternalRDFTurtle.g:1656:19: ( options {greedy=false; } : . )*
             loop14:
             do {
                 int alt14=2;
@@ -905,7 +905,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalRDFTurtle.g:1667:47: .
+            	    // InternalRDFTurtle.g:1656:47: .
             	    {
             	    matchAny(); 
 
@@ -934,10 +934,10 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1669:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' | '0' .. '9' )* )
-            // InternalRDFTurtle.g:1669:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' | '0' .. '9' )*
+            // InternalRDFTurtle.g:1658:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' | '0' .. '9' )* )
+            // InternalRDFTurtle.g:1658:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' | '0' .. '9' )*
             {
-            // InternalRDFTurtle.g:1669:11: ( '^' )?
+            // InternalRDFTurtle.g:1658:11: ( '^' )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -946,7 +946,7 @@ public class InternalRDFTurtleLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // InternalRDFTurtle.g:1669:11: '^'
+                    // InternalRDFTurtle.g:1658:11: '^'
                     {
                     match('^'); 
 
@@ -964,7 +964,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalRDFTurtle.g:1669:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' | '0' .. '9' )*
+            // InternalRDFTurtle.g:1658:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '-' | '0' .. '9' )*
             loop16:
             do {
                 int alt16=2;
@@ -1013,11 +1013,11 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1671:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalRDFTurtle.g:1671:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalRDFTurtle.g:1660:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalRDFTurtle.g:1660:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match('#'); 
-            // InternalRDFTurtle.g:1671:23: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalRDFTurtle.g:1660:23: (~ ( ( '\\n' | '\\r' ) ) )*
             loop17:
             do {
                 int alt17=2;
@@ -1030,7 +1030,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // InternalRDFTurtle.g:1671:23: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalRDFTurtle.g:1660:23: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1050,7 +1050,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalRDFTurtle.g:1671:39: ( ( '\\r' )? '\\n' )?
+            // InternalRDFTurtle.g:1660:39: ( ( '\\r' )? '\\n' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -1059,9 +1059,9 @@ public class InternalRDFTurtleLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // InternalRDFTurtle.g:1671:40: ( '\\r' )? '\\n'
+                    // InternalRDFTurtle.g:1660:40: ( '\\r' )? '\\n'
                     {
-                    // InternalRDFTurtle.g:1671:40: ( '\\r' )?
+                    // InternalRDFTurtle.g:1660:40: ( '\\r' )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -1070,7 +1070,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                     }
                     switch (alt18) {
                         case 1 :
-                            // InternalRDFTurtle.g:1671:40: '\\r'
+                            // InternalRDFTurtle.g:1660:40: '\\r'
                             {
                             match('\r'); 
 
@@ -1102,10 +1102,10 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1673:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' | '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' ) )
-            // InternalRDFTurtle.g:1673:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' | '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' )
+            // InternalRDFTurtle.g:1662:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' | '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' ) )
+            // InternalRDFTurtle.g:1662:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' | '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' )
             {
-            // InternalRDFTurtle.g:1673:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' | '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' )
+            // InternalRDFTurtle.g:1662:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' | '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"' )
             int alt23=3;
             int LA23_0 = input.LA(1);
 
@@ -1142,10 +1142,10 @@ public class InternalRDFTurtleLexer extends Lexer {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalRDFTurtle.g:1673:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalRDFTurtle.g:1662:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalRDFTurtle.g:1673:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalRDFTurtle.g:1662:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop20:
                     do {
                         int alt20=3;
@@ -1161,7 +1161,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt20) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1673:21: '\\\\' .
+                    	    // InternalRDFTurtle.g:1662:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1169,7 +1169,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalRDFTurtle.g:1673:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalRDFTurtle.g:1662:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1194,10 +1194,10 @@ public class InternalRDFTurtleLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalRDFTurtle.g:1673:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalRDFTurtle.g:1662:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalRDFTurtle.g:1673:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalRDFTurtle.g:1662:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop21:
                     do {
                         int alt21=3;
@@ -1213,7 +1213,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt21) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1673:54: '\\\\' .
+                    	    // InternalRDFTurtle.g:1662:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1221,7 +1221,7 @@ public class InternalRDFTurtleLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalRDFTurtle.g:1673:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalRDFTurtle.g:1662:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1246,11 +1246,11 @@ public class InternalRDFTurtleLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalRDFTurtle.g:1673:83: '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"'
+                    // InternalRDFTurtle.g:1662:83: '\"\"\"' ( options {greedy=false; } : . )* '\"\"\"'
                     {
                     match("\"\"\""); 
 
-                    // InternalRDFTurtle.g:1673:89: ( options {greedy=false; } : . )*
+                    // InternalRDFTurtle.g:1662:89: ( options {greedy=false; } : . )*
                     loop22:
                     do {
                         int alt22=2;
@@ -1284,7 +1284,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                         switch (alt22) {
                     	case 1 :
-                    	    // InternalRDFTurtle.g:1673:117: .
+                    	    // InternalRDFTurtle.g:1662:117: .
                     	    {
                     	    matchAny(); 
 
@@ -1320,10 +1320,10 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1675:10: ( ( '0' .. '9' )+ )
-            // InternalRDFTurtle.g:1675:12: ( '0' .. '9' )+
+            // InternalRDFTurtle.g:1664:10: ( ( '0' .. '9' )+ )
+            // InternalRDFTurtle.g:1664:12: ( '0' .. '9' )+
             {
-            // InternalRDFTurtle.g:1675:12: ( '0' .. '9' )+
+            // InternalRDFTurtle.g:1664:12: ( '0' .. '9' )+
             int cnt24=0;
             loop24:
             do {
@@ -1337,7 +1337,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalRDFTurtle.g:1675:13: '0' .. '9'
+            	    // InternalRDFTurtle.g:1664:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1369,12 +1369,12 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1677:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalRDFTurtle.g:1677:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalRDFTurtle.g:1666:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalRDFTurtle.g:1666:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalRDFTurtle.g:1677:24: ( options {greedy=false; } : . )*
+            // InternalRDFTurtle.g:1666:24: ( options {greedy=false; } : . )*
             loop25:
             do {
                 int alt25=2;
@@ -1399,7 +1399,7 @@ public class InternalRDFTurtleLexer extends Lexer {
 
                 switch (alt25) {
             	case 1 :
-            	    // InternalRDFTurtle.g:1677:52: .
+            	    // InternalRDFTurtle.g:1666:52: .
             	    {
             	    matchAny(); 
 
@@ -1429,10 +1429,10 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1679:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalRDFTurtle.g:1679:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalRDFTurtle.g:1668:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalRDFTurtle.g:1668:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalRDFTurtle.g:1679:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalRDFTurtle.g:1668:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt26=0;
             loop26:
             do {
@@ -1486,8 +1486,8 @@ public class InternalRDFTurtleLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalRDFTurtle.g:1681:16: ( . )
-            // InternalRDFTurtle.g:1681:18: .
+            // InternalRDFTurtle.g:1670:16: ( . )
+            // InternalRDFTurtle.g:1670:18: .
             {
             matchAny(); 
 
@@ -1767,7 +1767,7 @@ public class InternalRDFTurtleLexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "1661:26: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT )";
+            return "1650:26: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* RULE_EXPONENT | '.' ( '0' .. '9' )+ RULE_EXPONENT | ( '0' .. '9' )+ RULE_EXPONENT )";
         }
     }
     static final String DFA27_eotS =

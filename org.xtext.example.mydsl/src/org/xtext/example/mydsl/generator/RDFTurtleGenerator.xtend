@@ -32,6 +32,7 @@ import org.xtext.example.mydsl.rDFTurtle.PredicateObject
 class RDFTurtleGenerator extends AbstractGenerator {
 	
 	Map<String, String> NSMap = new HashMap<String, String>()
+	String Base = ""
 	
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		// print("Generate:" + resource.className + ".xmi\r\n")
@@ -66,15 +67,16 @@ class RDFTurtleGenerator extends AbstractGenerator {
 				prefix = ns.prefix.prefixName
 				ePrefix = ''' prefix="«prefix»"'''
 			}
-			iri = ns.prefix.iriref
+			iri = ns.prefix.iriref.replaceAll("^<|>$", "")
 			eIRI = ''' iri="«iri»"'''
 		}
 		else if (ns.base !== null) {
 			prefix = "base"
-			iri = ns.base.iriref
+			iri = ns.base.iriref.replaceAll("^<|>$", "")
 			eIRI = ''' base="«iri»"'''
+			Base = iri
 		}
-		NSMap.put(prefix, iri)
+		NSMap.put(prefix.replaceAll(":$", ""), iri)
 		var result = '''<directives«ePrefix»«eIRI»/>'''
 		//print(result + "\r\n")
 		return result
@@ -94,7 +96,7 @@ class RDFTurtleGenerator extends AbstractGenerator {
 		var first = true
 		for (o: po.objectList.objects) {
 			if (o.blank !== null && o.blank.predicateObjectList !== null) {
-				var child = new Element(v.toText)
+				var child = new Element(v.toText.TrimName)
 				var subChild = new Element()
 				parent.addElement(child)
 				child.addElement(subChild)
@@ -116,12 +118,20 @@ class RDFTurtleGenerator extends AbstractGenerator {
 		println(" Object:" + o.toText)
 		var vt = v.toText
 		if (first && (vt == "rdf:type" || vt == "type")) {
-			parent.setType(o.toText)
-			parent.addAttribute("about", s.toText)
+			parent.setType(o.toText.TrimName)
+			var about = s.toText
+			parent.addAttribute("about", about.expandName)
+			if (!about.startsWith("<")) {
+				parent.addAttribute("shortName", about.shortName)
+			}
 		}
 		else{
-			var child = new Element(v.toText)
-			child.addAttribute("resource", o.toText)
+			var child = new Element(v.toText.TrimName)
+			var resource = o.toText
+			child.addAttribute("resource", resource.expandName)
+			if (!resource.startsWith("<")) {
+				child.addAttribute("shortName", resource.shortName)
+			}
 			parent.addElement(child)
 		}
 	}
@@ -199,7 +209,7 @@ class RDFTurtleGenerator extends AbstractGenerator {
 		if (qname.name !== null) {
 			str += qname.name
 		}
-		return str.TrimName
+		return str
 	}
 	
 	protected def toText(Blank blank) {
@@ -250,5 +260,29 @@ class RDFTurtleGenerator extends AbstractGenerator {
 			}
 		}
 		return str
+	}
+	
+	protected def expandName(String q) {
+		if (q.startsWith("<")) {
+			return q
+		}
+		var parts = q.split(":") as String[]
+		var prefix = parts.get(0)
+		var name = parts.get(1)
+		var fullname = ""
+		if (prefix == "") {
+			fullname = Base + name
+		}
+		else{
+			var longPrefix = NSMap.get(prefix)
+			fullname = longPrefix + name
+		}
+		return fullname
+	}
+	
+	protected def shortName(String q) {
+		var parts = q.split(":") as String[]
+		var name = parts.get(1)
+		return name
 	}
 }
