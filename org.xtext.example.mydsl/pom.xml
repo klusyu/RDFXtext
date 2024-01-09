@@ -13,7 +13,7 @@
 	<artifactId>org.xtext.example.mydsl</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
-	<name>My Hero Language Core</name>
+	<name>Turtle and Sparql Language Core</name>
 
 	<build>
 		<plugins>
