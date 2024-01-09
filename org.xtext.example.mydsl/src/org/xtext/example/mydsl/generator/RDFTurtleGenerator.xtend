@@ -58,9 +58,11 @@ class RDFTurtleGenerator extends AbstractGenerator {
 				«s.directive.generateNamespace»
 				«ENDIF»
 			«ENDFOR»
+			
 			«IF sparql !== null»
 				«sg.toXMI(sparql, "")»
 			«ENDIF»
+			
 			«FOR s : doc.statements»
 				«IF s.triples !== null»
 				«s.triples.generateTriple»
@@ -126,9 +128,6 @@ class RDFTurtleGenerator extends AbstractGenerator {
 	}
 	
 	protected def processSPO(Element parent, Subject s, Verb v, Object o, boolean first) {
-		print("subject:" + s.toText)
-		print(" Verb:" + v.toText)
-		println(" Object:" + o.toText)
 		var vt = v.toText
 		if (first && (vt == "rdf:type" || vt == "type")) {
 			parent.setType(o.toText.TrimName)
