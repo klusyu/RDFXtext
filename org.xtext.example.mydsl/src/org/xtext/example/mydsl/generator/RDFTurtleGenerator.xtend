@@ -73,28 +73,24 @@ class RDFTurtleGenerator extends AbstractGenerator {
 	}
 	//这里应该把Turtle模型转换为RDF模型，这样在ATL中会容易操作一些
 	protected def generateNamespace(Directive ns) {
-		var ePrefix = ""
-		var eIRI = ""
 		var prefix = "";
 		var iri = "";
 		if (ns.prefix !== null) {
-			if (ns.prefix.prefixName !== null) {
-				prefix = ns.prefix.prefixName.replaceAll(":$", "")
-				ePrefix = '''«prefix»'''
-			}
+			prefix = ns.prefix.prefixName.replaceAll(":$", "")
 			iri = ns.prefix.iriref.replaceAll("^<|>$", "")
-			eIRI = '''"«iri»"'''
 		}
 		else if (ns.base !== null) {
-			ePrefix = "base"
 			prefix = "base"
 			iri = ns.base.iriref.replaceAll("^<|>$", "")
-			eIRI = '''"«iri»"'''
 			Base = iri
 		}
-		if (prefix !== "") {
-			NSMap.put(prefix.replaceAll(":$", ""), iri)
-			return'''xmlns:«ePrefix»=«eIRI»'''
+		prefix = prefix.trim()
+		if (!prefix.equals("")) {
+			println("prefix:" + prefix)
+			NSMap.put(prefix, iri)
+			var res = '''xmlns:«prefix»="«iri»"'''
+			println(res)
+			return res
 		}
 		else{
 			return ""
@@ -136,9 +132,14 @@ class RDFTurtleGenerator extends AbstractGenerator {
 		if (first && (vt == "rdf:type" || vt == "type")) {
 			parent.setType(o.toText.TrimName)
 			var about = s.toText
-			parent.addAttribute("about", about.expandName)
+			
 			if (!about.startsWith("<")) {
+				parent.addAttribute("about", about.expandName)
 				parent.addAttribute("shortName", about.shortName)
+			}
+			else{
+				parent.addAttribute("about", about.replaceAll("^<|>$", ""))
+				parent.addAttribute("shortName", capitalizeFirstLetter(about.shortName))
 			}
 		}
 		else{
@@ -297,8 +298,22 @@ class RDFTurtleGenerator extends AbstractGenerator {
 	}
 	
 	protected def shortName(String q) {
-		var parts = q.split(":") as String[]
-		var name = parts.get(1)
-		return name
+		if (q.startsWith("<")) {
+			var uri = q.replaceAll("^<|>$", "")
+			var name = uri.substring(uri.lastIndexOf("/") + 1)
+			return name
+		}
+		else{
+			var parts = q.split(":") as String[]
+			var name = parts.get(1)
+			return name
+		}
+	}
+	
+	def String capitalizeFirstLetter(String input) {
+    	if (input === null || input.length == 0) {
+        	return input
+    	}
+    	return input.substring(0, 1).toUpperCase + input.substring(1)
 	}
 }
