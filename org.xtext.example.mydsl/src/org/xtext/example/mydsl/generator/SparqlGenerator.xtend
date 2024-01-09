@@ -83,6 +83,7 @@ class SparqlGenerator extends AbstractGenerator {
 		var trimmed = s.trim()
 		trimmed = trimmed.replaceAll("^<|>$", "")
 		trimmed = trimmed.replaceAll(":$", "")
+		trimmed = trimmed.replaceAll("-", "_")
 		return trimmed
 	}
 	

@@ -298,16 +298,17 @@ class RDFTurtleGenerator extends AbstractGenerator {
 	}
 	
 	protected def shortName(String q) {
+		var name = ""
 		if (q.startsWith("<")) {
 			var uri = q.replaceAll("^<|>$", "")
-			var name = uri.substring(uri.lastIndexOf("/") + 1)
-			return name
+			name = uri.substring(uri.lastIndexOf("/") + 1)
 		}
 		else{
 			var parts = q.split(":") as String[]
-			var name = parts.get(1)
-			return name
+			name = parts.get(1)
 		}
+		name = name.replaceAll("-", "_")
+		return name
 	}
 	
 	def String capitalizeFirstLetter(String input) {
