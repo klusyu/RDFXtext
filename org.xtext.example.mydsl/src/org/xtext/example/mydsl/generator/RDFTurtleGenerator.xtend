@@ -51,13 +51,13 @@ class RDFTurtleGenerator extends AbstractGenerator {
 		return'''
 		<?xml version="1.0" encoding="UTF-8"?>
 		<sw:RDFDocument xmi:version="2.0" 
-			xmlns:xmi="http://www.omg.org/XMI" 
-			xmlns:rml="http://www.xtext.org/example/rdf/RDFTurtle">
+			xmlns:xmi="http://www.omg.org/XMI"
 			«FOR s : doc.statements»
-				«IF s.directive !== null»
-				«s.directive.generateNamespace»
-				«ENDIF»
+			«IF s.directive !== null»
+			«s.directive.generateNamespace»
+			«ENDIF»
 			«ENDFOR»
+			xmlns:sw="https://www.w3.org/2001/sw/">
 			
 			«IF sparql !== null»
 				«sg.toXMI(sparql, "")»
@@ -79,22 +79,26 @@ class RDFTurtleGenerator extends AbstractGenerator {
 		var iri = "";
 		if (ns.prefix !== null) {
 			if (ns.prefix.prefixName !== null) {
-				prefix = ns.prefix.prefixName
-				ePrefix = ''' prefix="«prefix»"'''
+				prefix = ns.prefix.prefixName.replaceAll(":$", "")
+				ePrefix = '''«prefix»'''
 			}
 			iri = ns.prefix.iriref.replaceAll("^<|>$", "")
-			eIRI = ''' iri="«iri»"'''
+			eIRI = '''"«iri»"'''
 		}
 		else if (ns.base !== null) {
+			ePrefix = "base"
 			prefix = "base"
 			iri = ns.base.iriref.replaceAll("^<|>$", "")
-			eIRI = ''' base="«iri»"'''
+			eIRI = '''"«iri»"'''
 			Base = iri
 		}
-		NSMap.put(prefix.replaceAll(":$", ""), iri)
-		var result = '''<directives«ePrefix»«eIRI»/>'''
-		//print(result + "\r\n")
-		return result
+		if (prefix !== "") {
+			NSMap.put(prefix.replaceAll(":$", ""), iri)
+			return'''xmlns:«ePrefix»=«eIRI»'''
+		}
+		else{
+			return ""
+		}
 	}
 	
 	protected def generateTriple(Triples triples) {
