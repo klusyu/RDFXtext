@@ -23,6 +23,8 @@ class RDFTurtleParsingTest {
 	@Inject
 	ParseHelper<TurtleDoc> parseHelper
 	
+	
+	
 	@Test
 	def void loadModel() {
 		val outpath = "C:\\source\\Xtext_workspace\\RDFXtext\\data\\turtle_out.xmi"

@@ -25,14 +25,14 @@ class SparqlGenerator extends AbstractGenerator {
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		// print("Generate:" + resource.className + ".xmi\r\n")
 		var path = "rdf_example.xmi"
-		fsa.generateFile(path, toXMI(resource.contents.head as Query))
+		fsa.generateFile(path, toXMI(resource.contents.head as Query, ""))
 	}
 	
-	protected def String toXMI(Query query) {
+	def String toXMI(Query query, String tab) {
 		var sparql = new Element("sparql")
 		sparql.addElements(query.prologue.generatePrologue)
 		sparql.addElement(query.selectQuery.generateSelectQuery)
-		return sparql.toXMI("")
+		return sparql.toXMI(tab)
 	}
 	
 	protected def List<Element> generatePrologue(Prologue p) {

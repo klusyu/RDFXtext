@@ -23,6 +23,7 @@ import org.xtext.example.mydsl.rDFTurtle.Literal
 import org.xtext.example.mydsl.rDFTurtle.LanguageString
 import org.xtext.example.mydsl.rDFTurtle.DatatypeString
 import org.xtext.example.mydsl.rDFTurtle.PredicateObject
+import org.xtext.example.mydsl.sparql.Query
 
 /**
  * Generates code from your model files on save.
@@ -36,11 +37,17 @@ class RDFTurtleGenerator extends AbstractGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		// print("Generate:" + resource.className + ".xmi\r\n")
-		var path = "rdf_example.xmi"
-		fsa.generateFile(path, toXMI(resource.contents.head as TurtleDoc))
+		var path = "default_ouput.xmi"
+		if (resource.contents.length >= 2) {
+			fsa.generateFile(path, toXMI(resource.contents.head as TurtleDoc, resource.contents.get(1) as Query))
+		}
+		else{
+			fsa.generateFile(path, toXMI(resource.contents.head as TurtleDoc, null))
+		}
 	}
 	
-	protected def String toXMI(TurtleDoc doc) {
+	def String toXMI(TurtleDoc doc, Query sparql) {
+		var sg = new SparqlGenerator()
 		return'''
 		<?xml version="1.0" encoding="UTF-8"?>
 		<sw:RDFDocument xmi:version="2.0" 
@@ -48,9 +55,15 @@ class RDFTurtleGenerator extends AbstractGenerator {
 			xmlns:rml="http://www.xtext.org/example/rdf/RDFTurtle">
 			«FOR s : doc.statements»
 				«IF s.directive !== null»
-					«s.directive.generateNamespace»
-				«ELSEIF s.triples !== null»
-					«s.triples.generateTriple»
+				«s.directive.generateNamespace»
+				«ENDIF»
+			«ENDFOR»
+			«IF sparql !== null»
+				«sg.toXMI(sparql, "")»
+			«ENDIF»
+			«FOR s : doc.statements»
+				«IF s.triples !== null»
+				«s.triples.generateTriple»
 				«ENDIF»
 			«ENDFOR»
 		</sw:RDFDocument>
